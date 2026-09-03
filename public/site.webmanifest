@@ -1,0 +1,13 @@
+{
+  "name": "Dr. Saudia Mushkbar, MD — Family Medicine in Toledo",
+  "short_name": "Saudia Mushkbar MD",
+  "description": "Family Medicine and Primary Care for children, adults and seniors in Toledo, Ohio.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFCFA",
+  "theme_color": "#2F4749",
+  "icons": [
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "192x192", "type": "image/png" }
+  ]
+}

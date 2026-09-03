@@ -1,0 +1,113 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+/*
+ * Base layer. Everything component-specific lives in Tailwind utility classes;
+ * this file only holds tokens, element defaults and a couple of utilities that
+ * genuinely cannot be expressed inline.
+ */
+
+@layer base {
+  :root {
+    --font-display: var(--font-playfair, Georgia, serif);
+    --font-sans: var(--font-dm-sans, system-ui, sans-serif);
+    --font-mono: var(--font-space-mono, ui-monospace, monospace);
+
+    /* Brand tokens, mirrored from tailwind.config.ts for use in raw CSS. */
+    --brand: #2f4749;
+    --accent: #f7c99b;
+    --canvas: #fdfcfa;
+    --hairline: #eae6df;
+
+    color-scheme: light;
+  }
+
+  * {
+    border-color: var(--hairline);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Offset in-page anchors so the sticky header never covers a heading. */
+    scroll-padding-top: 6.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: #625a53;
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* Guard against any single wide child forcing a horizontal scrollbar. */
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--brand);
+    font-weight: 400;
+    text-wrap: balance;
+    /* Safety net: a single long word can never push a narrow column wider. */
+    overflow-wrap: break-word;
+  }
+
+  h5,
+  h6 {
+    color: var(--brand);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* A single, consistent focus ring for every interactive element. */
+  :where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  img,
+  svg,
+  video,
+  iframe {
+    max-width: 100%;
+  }
+}
+
+@layer utilities {
+  /* Horizontal rule used beside eyebrow labels, as on the original hero. */
+  .rule-line {
+    display: inline-block;
+    height: 1px;
+    width: 3.5rem;
+    background-color: currentColor;
+    opacity: 0.5;
+  }
+
+  /* Any wide element (tables, logo rows) can opt into contained scrolling. */
+  .scroll-x {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+  }
+}
