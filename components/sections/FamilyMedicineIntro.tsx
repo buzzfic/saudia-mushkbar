@@ -31,7 +31,7 @@ export function FamilyMedicineIntro() {
             </p>
             <Link
               href="/about"
-              className="mt-8 inline-flex items-center gap-2 font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-400"
+              className="mt-8 inline-flex items-center gap-2 font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-500"
             >
               Meet Dr. Mushkbar
               <ArrowRight className="size-4" aria-hidden="true" />

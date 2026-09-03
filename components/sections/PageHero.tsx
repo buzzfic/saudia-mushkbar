@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarCheck, Phone } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 
 import { Breadcrumbs, type Crumb } from "@/components/common/Breadcrumbs";
 import { Container } from "@/components/common/Container";
 import { Button } from "@/components/ui/button";
-import { CONTACT, CTA } from "@/lib/constants";
+import { CTA } from "@/lib/constants";
 
 /**
  * Shared hero for the non-landing pages (About, Services, Contact) so every
@@ -37,7 +37,7 @@ export function PageHero({
 
         <div className="mt-10 grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 [&>*]:min-w-0">
           <div>
-            <p className="font-mono text-eyebrow uppercase tracking-[0.14em] text-gold">
+            <p className="font-mono text-eyebrow uppercase tracking-[0.14em] text-brand-500">
               {eyebrow}
             </p>
             <h1 className="mt-4 text-display-1">{title}</h1>
@@ -56,15 +56,15 @@ export function PageHero({
             {showCtas ? (
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Button asChild variant="alert" size="lg">
-                  <a href={CONTACT.phoneHref}>
+                  <a href={CTA.callHref}>
                     <Phone className="size-4" aria-hidden="true" />
                     {CTA.callLabel}
                   </a>
                 </Button>
                 <Button asChild variant="brand" size="lg">
-                  <Link href={CTA.scheduleHref}>
-                    <CalendarCheck className="size-4" aria-hidden="true" />
-                    {CTA.requestLabel}
+                  <Link href={CTA.contactHref}>
+                    <MapPin className="size-4" aria-hidden="true" />
+                    {CTA.contactLabel}
                   </Link>
                 </Button>
               </div>

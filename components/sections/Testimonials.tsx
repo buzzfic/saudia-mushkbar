@@ -43,7 +43,7 @@ export function Testimonials({
                   <span className="block font-display text-lg text-brand">
                     {review.author}
                   </span>
-                  <span className="mt-0.5 block font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-gold">
+                  <span className="mt-0.5 block font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-brand-500">
                     Posted on {review.source}
                   </span>
                 </figcaption>

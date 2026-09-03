@@ -40,13 +40,10 @@ export type LandingPageData = {
   metaDescription: string;
   /** Name used in MedicalProcedure structured data. */
   serviceName: string;
-  /** Accent colour role used for the second headline line and the badge. */
-  accent: "alert" | "brand" | "gold";
-
   badge?: { label: string; icon: string };
   /** First headline line, set in the brand colour. */
   headingLead: string;
-  /** Second headline line, set in the accent colour. */
+  /** Second headline line, set in a lighter tint of the brand colour. */
   headingAccent: string;
   tagline: string;
   intro: string;

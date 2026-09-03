@@ -44,7 +44,7 @@ export function WhyChooseAndReviews({
 
           <div className="rounded-card border border-hairline bg-accent-soft p-8 lg:p-10">
             <h2 className="flex items-center gap-2.5 font-display text-display-4">
-              <Quote className="size-6 text-gold" aria-hidden="true" />
+              <Quote className="size-6 text-accent-strong" aria-hidden="true" />
               What Our Patients Say
             </h2>
 

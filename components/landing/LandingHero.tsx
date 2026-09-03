@@ -1,27 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarCheck, Check, Phone } from "lucide-react";
+import { Check, MapPin, Phone } from "lucide-react";
 
 import { Breadcrumbs, type Crumb } from "@/components/common/Breadcrumbs";
 import { Container } from "@/components/common/Container";
 import { Icon } from "@/components/common/Icon";
 import { StarRating } from "@/components/common/ReviewBadges";
 import { Button } from "@/components/ui/button";
-import { CONTACT, CTA, REVIEWS } from "@/lib/constants";
+import { CTA, REVIEWS } from "@/lib/constants";
 import type { LandingPageData } from "@/lib/landing-types";
 import { cn } from "@/lib/utils";
-
-const accentText = {
-  alert: "text-alert",
-  brand: "text-brand-400",
-  gold: "text-gold",
-} as const;
-
-const accentBadge = {
-  alert: "bg-alert text-white",
-  brand: "bg-brand text-white",
-  gold: "bg-gold text-white",
-} as const;
 
 const trustItems = [
   { icon: "ShieldCheck", title: "Board-Certified", body: "in Family Medicine" },
@@ -46,10 +34,7 @@ export function LandingHero({
           <div>
             {data.badge ? (
               <p
-                className={cn(
-                  "inline-flex items-center gap-2 rounded-pill px-4 py-2 font-mono text-[0.6875rem] uppercase tracking-[0.14em]",
-                  accentBadge[data.accent],
-                )}
+                className="inline-flex items-center gap-2 rounded-pill bg-accent px-4 py-2 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-brand"
               >
                 <Icon name={data.badge.icon} className="size-4" />
                 {data.badge.label}
@@ -58,9 +43,7 @@ export function LandingHero({
 
             <h1 className={cn("text-display-1", data.badge ? "mt-6" : "mt-0")}>
               <span className="block">{data.headingLead}</span>{" "}
-              <span className={cn("block", accentText[data.accent])}>
-                {data.headingAccent}
-              </span>
+              <span className="block text-brand-500">{data.headingAccent}</span>
             </h1>
 
             <p className="mt-5 font-display text-display-4 text-brand-500">
@@ -111,15 +94,15 @@ export function LandingHero({
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <Button asChild variant="alert" size="lg">
-                <a href={CONTACT.phoneHref}>
+                <a href={CTA.callHref}>
                   <Phone className="size-4" aria-hidden="true" />
                   {CTA.callLabel}
                 </a>
               </Button>
               <Button asChild variant="brand" size="lg">
-                <Link href={CTA.scheduleHref}>
-                  <CalendarCheck className="size-4" aria-hidden="true" />
-                  {CTA.requestLabel}
+                <Link href={CTA.contactHref}>
+                  <MapPin className="size-4" aria-hidden="true" />
+                  {CTA.contactLabel}
                 </Link>
               </Button>
             </div>

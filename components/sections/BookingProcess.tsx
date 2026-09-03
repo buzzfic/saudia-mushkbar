@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { CalendarCheck, Phone } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 
 import { Container } from "@/components/common/Container";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { Button } from "@/components/ui/button";
-import { CONTACT, CTA } from "@/lib/constants";
+import { CTA } from "@/lib/constants";
 import { bookingIntro, bookingSteps } from "@/lib/content";
 
 /** "Simple Booking Process" */
@@ -41,15 +41,15 @@ export function BookingProcess() {
 
         <div className="mt-12 flex flex-col justify-center gap-3 sm:flex-row">
           <Button asChild variant="alert" size="lg">
-            <a href={CONTACT.phoneHref}>
+            <a href={CTA.callHref}>
               <Phone className="size-4" aria-hidden="true" />
               {CTA.callLabel}
             </a>
           </Button>
           <Button asChild variant="brand" size="lg">
-            <Link href={CTA.scheduleHref}>
-              <CalendarCheck className="size-4" aria-hidden="true" />
-              {CTA.scheduleLabel}
+            <Link href={CTA.contactHref}>
+              <MapPin className="size-4" aria-hidden="true" />
+              {CTA.contactLabel}
             </Link>
           </Button>
         </div>

@@ -36,14 +36,12 @@ app/                     One folder per route; every page is statically rendered
   robots.ts sitemap.ts   SEO file conventions
   opengraph-image.tsx    Generated 1200×630 social card
   not-found.tsx error.tsx
-  contact/actions.ts     Server action for the appointment request form
 components/
   ui/                    Button, Card, Sheet, Accordion, Input — Radix + CVA
   layout/                Header, DesktopNav, MobileNavigation, Footer, Logo
   sections/              Homepage and shared page sections
   landing/               The service landing-page template
   common/                Container, SectionHeading, Breadcrumbs, JsonLd, Icon
-  forms/                 AppointmentForm
 lib/
   constants.ts           Business NAP data — the single source of truth
   content.ts             Copy migrated from the WordPress site
@@ -94,27 +92,27 @@ All documented in `.env.example`. Nothing secret is referenced from client code.
 
 | Variable | Required | Purpose |
 | --- | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | no | Canonical origin. Defaults to the production domain so a missing value can never canonicalise to a preview URL. |
+| `NEXT_PUBLIC_SITE_URL` | no | Canonical origin. Leave unset to use the production domain; an empty or malformed value falls back to it rather than failing the build. Only set it when a deployment must canonicalise to itself. |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | no | GA4 property. Defaults to the ID carried over from WordPress; analytics only load in production. |
-| `RESEND_API_KEY` | for the form | Server-side only. |
-| `CONTACT_FROM_EMAIL` | for the form | Verified sender on your domain. |
-| `CONTACT_TO_EMAIL` | for the form | Where appointment requests are delivered. |
 
-Without the three contact variables the form still renders and validates, but
-tells the visitor to call the office rather than silently dropping the message.
+There are no secrets. Appointments are booked by phone, so the site sends no
+email and needs no mail provider credentials.
 
 Never commit `.env.local`.
 
 ## Conventions
 
-- **Server Components by default.** Only the mobile drawer, desktop menus, the
-  appointment form and the click-to-load media embeds are client components.
+- **Server Components by default.** Only the mobile drawer, the desktop menus
+  and the click-to-load media embeds are client components.
 - **Content lives in `lib/`,** not inside JSX, so copy can be updated without
   touching layout.
 - **Business facts live in `lib/constants.ts`.** Name, address and phone are
   written once and reused, including in the structured data.
 - **Third-party media is click-to-load.** The five WTOL / YouTube / iHeart
   embeds mount only when a visitor asks for them.
+- **Booking is by phone.** Every primary call to action is a `tel:` link to the
+  office; the secondary action goes to `/contact` for the address, hours, map
+  and directions. Both labels come from `CTA` in `lib/constants.ts`.
 - **No fabricated content.** Anything not published on the original site is
   either omitted or flagged in `lib/constants.ts`. See MIGRATION.md §4.
 
@@ -123,8 +121,7 @@ Never commit `.env.local`.
 1. Confirm the office hours flagged `PENDING CLIENT CONFIRMATION` in
    `lib/constants.ts`, or set `OFFICE_HOURS` to `null`.
 2. Add real social profile URLs to the footer, or leave them out.
-3. Set the contact-form environment variables.
-4. Submit `https://www.saudiamushkbar.com/sitemap.xml` in Search Console and
+3. Submit `https://www.saudiamushkbar.com/sitemap.xml` in Search Console and
    watch the coverage report for the two preserved URLs.
-5. Remove `public/images/pages/` — those are design reference mockups and would
+4. Remove `public/images/pages/` — those are design reference mockups and would
    otherwise be served publicly.

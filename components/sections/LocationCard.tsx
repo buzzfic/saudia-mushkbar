@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-import { CalendarCheck, Clock, MapPin, Phone } from "lucide-react";
+import { Clock, MapPin, Phone } from "lucide-react";
 
 import { Container } from "@/components/common/Container";
 import { Button } from "@/components/ui/button";
@@ -23,7 +22,7 @@ export function LocationCard({
         <div className="grid gap-6 lg:grid-cols-[0.9fr_0.9fr_1.5fr] [&>*]:min-w-0">
           <div className="rounded-card border border-hairline bg-white p-6 shadow-card sm:p-7">
             <h2 className="flex items-center gap-2.5 font-display text-xl text-brand">
-              <MapPin className="size-5 text-gold" aria-hidden="true" />
+              <MapPin className="size-5 text-brand-400" aria-hidden="true" />
               Conveniently Located in Toledo
             </h2>
 
@@ -42,9 +41,9 @@ export function LocationCard({
               </p>
               <a
                 href={CONTACT.phoneHref}
-                className="mt-3 inline-flex items-center gap-2 text-[0.9375rem] font-medium text-brand transition-colors hover:text-brand-400"
+                className="mt-3 inline-flex items-center gap-2 text-[0.9375rem] font-medium text-brand transition-colors hover:text-brand-500"
               >
-                <Phone className="size-4 text-gold" aria-hidden="true" />
+                <Phone className="size-4 text-brand-400" aria-hidden="true" />
                 {CONTACT.phoneDisplay}
               </a>
             </address>
@@ -52,7 +51,7 @@ export function LocationCard({
             {OFFICE_HOURS ? (
               <dl className="mt-5 border-t border-hairline pt-5 text-[0.9375rem]">
                 <dt className="flex items-center gap-2 font-medium text-brand">
-                  <Clock className="size-4 text-gold" aria-hidden="true" />
+                  <Clock className="size-4 text-brand-400" aria-hidden="true" />
                   Office hours
                 </dt>
                 {OFFICE_HOURS.map((slot) => (
@@ -90,16 +89,16 @@ export function LocationCard({
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
               <Button asChild variant="alert" size="md">
-                <a href={CONTACT.phoneHref}>
+                <a href={CTA.callHref}>
                   <Phone className="size-4" aria-hidden="true" />
                   {CTA.callLabel}
                 </a>
               </Button>
-              <Button asChild variant="primary" size="md">
-                <Link href={CTA.scheduleHref}>
-                  <CalendarCheck className="size-4" aria-hidden="true" />
-                  {CTA.requestLabel}
-                </Link>
+              <Button asChild variant="outline-light" size="md">
+                <a href={MAPS.directions} target="_blank" rel="noopener noreferrer">
+                  <MapPin className="size-4" aria-hidden="true" />
+                  Get Directions
+                </a>
               </Button>
             </div>
           </div>

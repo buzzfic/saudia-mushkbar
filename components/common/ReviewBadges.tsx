@@ -24,8 +24,8 @@ export function StarRating({
           className={cn(
             "size-4",
             star <= Math.round(rating)
-              ? "fill-gold text-gold"
-              : "fill-none text-gold/40",
+              ? "fill-accent-strong text-accent-strong"
+              : "fill-none text-accent-strong/35",
           )}
         />
       ))}

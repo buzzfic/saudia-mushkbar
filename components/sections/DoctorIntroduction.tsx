@@ -29,7 +29,7 @@ export function DoctorIntroduction({
           </div>
 
           <div>
-            <p className="font-mono text-eyebrow uppercase tracking-[0.14em] text-gold">
+            <p className="font-mono text-eyebrow uppercase tracking-[0.14em] text-brand-500">
               About Dr. Saudia Mushkbar
             </p>
             <Heading className="mt-4 text-display-2">
@@ -54,7 +54,7 @@ export function DoctorIntroduction({
             {showLink ? (
               <Link
                 href="/about"
-                className="mt-9 inline-flex items-center gap-2 font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-400"
+                className="mt-9 inline-flex items-center gap-2 font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-500"
               >
                 Read more about Dr. Mushkbar
                 <ArrowRight className="size-4" aria-hidden="true" />

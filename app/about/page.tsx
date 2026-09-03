@@ -66,7 +66,7 @@ export default function AboutPage() {
           href={PRACTICE.affiliationUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-7 inline-flex items-center gap-2 font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-400"
+          className="mt-7 inline-flex items-center gap-2 font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-500"
         >
           View the {PRACTICE.affiliation} profile
           <ExternalLink className="size-4" aria-hidden="true" />
@@ -83,7 +83,7 @@ export default function AboutPage() {
               </p>
               <Link
                 href="/primary-care-doctor-toledo"
-                className="mt-7 inline-flex items-center gap-2 font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-400"
+                className="mt-7 inline-flex items-center gap-2 font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-500"
               >
                 Primary care in Toledo
                 <ArrowRight className="size-4" aria-hidden="true" />
@@ -97,7 +97,7 @@ export default function AboutPage() {
               </p>
               <Link
                 href="/services"
-                className="mt-7 inline-flex items-center gap-2 font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-400"
+                className="mt-7 inline-flex items-center gap-2 font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-500"
               >
                 Explore every service
                 <ArrowRight className="size-4" aria-hidden="true" />

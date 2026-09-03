@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CalendarCheck, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 
 import { Container } from "@/components/common/Container";
 import { Button } from "@/components/ui/button";
-import { CONTACT, CTA } from "@/lib/constants";
+import { CTA } from "@/lib/constants";
 import { primaryNav } from "@/lib/navigation";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function NotFound() {
   return (
     <section className="py-24 lg:py-32">
       <Container width="narrow">
-        <p className="font-mono text-eyebrow uppercase tracking-[0.14em] text-gold">
+        <p className="font-mono text-eyebrow uppercase tracking-[0.14em] text-brand-500">
           Error 404
         </p>
         <h1 className="mt-4 text-display-2">
@@ -34,17 +34,11 @@ export default function NotFound() {
           <Button asChild variant="brand" size="lg">
             <Link href="/">Go to the homepage</Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
-            <a href={CONTACT.phoneHref}>
+          <Button asChild variant="alert" size="lg">
+            <a href={CTA.callHref}>
               <Phone className="size-4" aria-hidden="true" />
-              {CONTACT.phoneDisplay}
+              {CTA.callLabel}
             </a>
-          </Button>
-          <Button asChild variant="primary" size="lg">
-            <Link href={CTA.scheduleHref}>
-              <CalendarCheck className="size-4" aria-hidden="true" />
-              {CTA.requestLabel}
-            </Link>
           </Button>
         </div>
 
@@ -57,7 +51,7 @@ export default function NotFound() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-[1.0625rem] text-brand underline decoration-accent decoration-2 underline-offset-4 transition-colors hover:text-brand-400"
+                  className="text-[1.0625rem] text-brand underline decoration-accent decoration-2 underline-offset-4 transition-colors hover:text-brand-500"
                 >
                   {item.label}
                 </Link>

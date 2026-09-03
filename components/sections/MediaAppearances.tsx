@@ -23,7 +23,7 @@ export function MediaAppearances() {
               <h3 className="font-display text-xl leading-snug">
                 {item.title}
               </h3>
-              <p className="font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-gold">
+              <p className="font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-brand-500">
                 {item.outlet}
               </p>
             </li>

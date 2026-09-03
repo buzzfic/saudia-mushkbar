@@ -34,7 +34,7 @@ export function PatientReviews() {
                   <span className="font-display text-lg text-brand">
                     {review.author}
                   </span>
-                  <span className="font-mono text-[0.625rem] uppercase tracking-[0.14em] text-gold">
+                  <span className="font-mono text-[0.625rem] uppercase tracking-[0.14em] text-brand-500">
                     {review.source}
                   </span>
                 </figcaption>
@@ -48,7 +48,7 @@ export function PatientReviews() {
             href={REVIEWS.google.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-400"
+            className="font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-500"
           >
             Read more reviews on Google
           </a>

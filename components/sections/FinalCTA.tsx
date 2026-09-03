@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { CalendarCheck, Phone } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 
 import { Container } from "@/components/common/Container";
 import { Button } from "@/components/ui/button";
-import { CONTACT, CTA } from "@/lib/constants";
+import { CTA } from "@/lib/constants";
 
 export function FinalCTA({
   title = "Looking for a Family Doctor in Toledo?",
@@ -31,15 +31,15 @@ export function FinalCTA({
 
           <div className="mt-9 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
             <Button asChild variant="alert" size="lg">
-              <a href={CONTACT.phoneHref}>
+              <a href={CTA.callHref}>
                 <Phone className="size-4" aria-hidden="true" />
                 {CTA.callLabel}
               </a>
             </Button>
-            <Button asChild variant="primary" size="lg">
-              <Link href={CTA.scheduleHref}>
-                <CalendarCheck className="size-4" aria-hidden="true" />
-                {CTA.requestLabel}
+            <Button asChild variant="outline-light" size="lg">
+              <Link href={CTA.contactHref}>
+                <MapPin className="size-4" aria-hidden="true" />
+                {CTA.contactLabel}
               </Link>
             </Button>
           </div>

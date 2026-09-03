@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarCheck, Phone } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 
 import { Container } from "@/components/common/Container";
 import { InsuranceLogos } from "@/components/common/InsuranceLogos";
 import { Button } from "@/components/ui/button";
-import { CONTACT, CTA } from "@/lib/constants";
+import { CTA } from "@/lib/constants";
 import { insuranceSummary } from "@/lib/content";
 
 /**
@@ -44,15 +44,15 @@ export function Hero() {
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button asChild variant="alert" size="lg">
-                <a href={CONTACT.phoneHref}>
+                <a href={CTA.callHref}>
                   <Phone className="size-4" aria-hidden="true" />
                   {CTA.callLabel}
                 </a>
               </Button>
               <Button asChild variant="brand" size="lg">
-                <Link href={CTA.scheduleHref}>
-                  <CalendarCheck className="size-4" aria-hidden="true" />
-                  {CTA.scheduleLabel}
+                <Link href={CTA.contactHref}>
+                  <MapPin className="size-4" aria-hidden="true" />
+                  {CTA.contactLabel}
                 </Link>
               </Button>
             </div>
@@ -83,7 +83,7 @@ export function Hero() {
               </p>
               <Link
                 href="/same-day-primary-care-toledo"
-                className="mt-4 inline-flex text-[0.9375rem] font-medium text-brand underline decoration-accent decoration-2 underline-offset-4 transition-colors hover:text-brand-400"
+                className="mt-4 inline-flex text-[0.9375rem] font-medium text-brand underline decoration-accent decoration-2 underline-offset-4 transition-colors hover:text-brand-500"
               >
                 See how same-day care works
               </Link>
@@ -92,7 +92,7 @@ export function Hero() {
         </div>
 
         <div className="mt-16 border-t border-hairline pt-12">
-          <h2 className="text-center font-mono text-eyebrow uppercase tracking-[0.14em] text-gold">
+          <h2 className="text-center font-mono text-eyebrow uppercase tracking-[0.14em] text-brand-500">
             In-network with leading plans
           </h2>
           <InsuranceLogos className="mt-8" priority />

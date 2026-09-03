@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CalendarCheck, Phone } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 
 import { Container } from "@/components/common/Container";
 import { Button } from "@/components/ui/button";
@@ -41,9 +41,9 @@ export function Header() {
           </Button>
 
           <Button asChild variant="brand" size="sm" className="hidden sm:inline-flex">
-            <Link href={CTA.scheduleHref}>
-              <CalendarCheck className="size-4" aria-hidden="true" />
-              {CTA.scheduleLabel}
+            <Link href={CTA.contactHref}>
+              <MapPin className="size-4" aria-hidden="true" />
+              {CTA.contactLabel}
             </Link>
           </Button>
 

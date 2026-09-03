@@ -198,7 +198,7 @@ export function DesktopNav() {
                     <div className="border-t border-hairline bg-cream px-5 py-3.5">
                       <Link
                         href={overviewLink.href}
-                        className="inline-flex items-center gap-2 text-[0.9375rem] font-medium text-brand transition-colors hover:text-brand-400"
+                        className="inline-flex items-center gap-2 text-[0.9375rem] font-medium text-brand transition-colors hover:text-brand-500"
                       >
                         {overviewLink.label}
                         <ArrowRight className="size-4" aria-hidden="true" />

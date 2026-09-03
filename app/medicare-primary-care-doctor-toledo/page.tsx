@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CalendarCheck, Check, Phone } from "lucide-react";
+import { ArrowRight, Check, MapPin, Phone } from "lucide-react";
 
 import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 import { Container } from "@/components/common/Container";
@@ -13,7 +13,7 @@ import { SectionHeading } from "@/components/common/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { LocationCard } from "@/components/sections/LocationCard";
 import { FinalCTA } from "@/components/sections/FinalCTA";
-import { CONTACT, CTA } from "@/lib/constants";
+import { CTA } from "@/lib/constants";
 import { copy, medicareAssurances, medicareServices } from "@/lib/content";
 import { medicarePages } from "@/lib/navigation";
 import { pageMetadata } from "@/lib/seo";
@@ -100,15 +100,15 @@ export default function MedicarePrimaryCarePage() {
 
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
                 <Button asChild variant="alert" size="lg">
-                  <a href={CONTACT.phoneHref}>
+                  <a href={CTA.callHref}>
                     <Phone className="size-4" aria-hidden="true" />
                     {CTA.callLabel}
                   </a>
                 </Button>
                 <Button asChild variant="brand" size="lg">
-                  <Link href={CTA.scheduleHref}>
-                    <CalendarCheck className="size-4" aria-hidden="true" />
-                    Schedule Visit
+                  <Link href={CTA.contactHref}>
+                    <MapPin className="size-4" aria-hidden="true" />
+                    {CTA.contactLabel}
                   </Link>
                 </Button>
               </div>
@@ -185,7 +185,7 @@ export default function MedicarePrimaryCarePage() {
               </p>
               <Link
                 href="/about"
-                className="mt-7 inline-flex items-center gap-2 font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-400"
+                className="mt-7 inline-flex items-center gap-2 font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-500"
               >
                 Meet Dr. Mushkbar
                 <ArrowRight className="size-4" aria-hidden="true" />
@@ -248,7 +248,7 @@ export default function MedicarePrimaryCarePage() {
                         </span>
                       </span>
                       <ArrowRight
-                        className="mt-1 size-4 shrink-0 text-gold transition-transform group-hover:translate-x-1"
+                        className="mt-1 size-4 shrink-0 text-brand-400 transition-transform group-hover:translate-x-1"
                         aria-hidden="true"
                       />
                     </Link>

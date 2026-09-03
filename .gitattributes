@@ -1,0 +1,11 @@
+# Normalise line endings so the repo stays LF regardless of contributor OS.
+# Without this, editing on Windows produces whole-file diffs on macOS/Linux.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary

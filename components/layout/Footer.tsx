@@ -121,10 +121,10 @@ export function Footer() {
             </h2>
             <div className="mt-5 flex flex-col gap-3">
               <Button asChild variant="alert" size="md">
-                <a href={CONTACT.phoneHref}>Call {CONTACT.phoneDisplay}</a>
+                <a href={CTA.callHref}>{CTA.callLabel}</a>
               </Button>
-              <Button asChild variant="primary" size="md">
-                <Link href={CTA.scheduleHref}>{CTA.requestLabel}</Link>
+              <Button asChild variant="outline-light" size="md">
+                <Link href={CTA.contactHref}>{CTA.contactLabel}</Link>
               </Button>
             </div>
 

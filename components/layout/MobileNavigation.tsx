@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { CalendarCheck, Menu, MapPin, Phone } from "lucide-react";
+import { Menu, MapPin, Phone } from "lucide-react";
 
 import {
   Sheet,
@@ -13,7 +13,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { ADDRESS_ONE_LINE, CONTACT, CTA } from "@/lib/constants";
+import { ADDRESS_ONE_LINE, CTA } from "@/lib/constants";
 import { primaryNav } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
 
@@ -104,23 +104,23 @@ export function MobileNavigation() {
 
           <div className="mt-auto border-t border-hairline bg-cream px-6 py-6">
             <div className="flex flex-col gap-3">
-              <Button asChild variant="brand" size="md">
-                <Link href={CTA.scheduleHref}>
-                  <CalendarCheck className="size-4" aria-hidden="true" />
-                  {CTA.requestLabel}
-                </Link>
-              </Button>
               <Button asChild variant="alert" size="md">
-                <a href={CONTACT.phoneHref}>
+                <a href={CTA.callHref}>
                   <Phone className="size-4" aria-hidden="true" />
-                  {CONTACT.phoneDisplay}
+                  {CTA.callLabel}
                 </a>
+              </Button>
+              <Button asChild variant="outline" size="md">
+                <Link href={CTA.contactHref}>
+                  <MapPin className="size-4" aria-hidden="true" />
+                  {CTA.contactLabel}
+                </Link>
               </Button>
             </div>
 
             <p className="mt-5 flex items-start gap-2 text-sm leading-relaxed text-body">
               <MapPin
-                className="mt-0.5 size-4 shrink-0 text-gold"
+                className="mt-0.5 size-4 shrink-0 text-brand-400"
                 aria-hidden="true"
               />
               {ADDRESS_ONE_LINE}

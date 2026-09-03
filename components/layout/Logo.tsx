@@ -57,7 +57,7 @@ export function Logo({
         <span
           className={cn(
             "block font-mono text-[0.625rem] uppercase tracking-[0.13em]",
-            tone === "light" ? "text-white/65" : "text-gold",
+            tone === "light" ? "text-white/65" : "text-brand-500",
           )}
         >
           {PRACTICE.tagline}

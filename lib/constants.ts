@@ -97,9 +97,14 @@ export const ANALYTICS = {
   googleSiteVerification: "Li89H58pJhBs2VbJi2MatWNKY9m0N7n20TgElm6BazI",
 } as const;
 
+/**
+ * Appointments are booked by phone, as they were on the original site, so the
+ * primary call to action dials the office directly. The secondary action goes
+ * to the contact page for the address, hours and directions.
+ */
 export const CTA = {
-  scheduleHref: "/contact#appointment",
-  scheduleLabel: "Schedule a Visit",
-  requestLabel: "Request an Appointment",
+  callHref: CONTACT.phoneHref,
   callLabel: `Call ${CONTACT.phoneDisplay}`,
+  contactHref: "/contact",
+  contactLabel: "Contact & Directions",
 } as const;

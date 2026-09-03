@@ -78,7 +78,7 @@ export default function ServicesPage() {
                     {service.description}
                   </p>
                   {service.href ? (
-                    <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-colors group-hover:text-brand-400">
+                    <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-colors group-hover:text-brand-500">
                       Learn more
                       <ArrowRight className="size-4" aria-hidden="true" />
                     </span>
@@ -118,7 +118,7 @@ export default function ServicesPage() {
                         </span>
                       </span>
                       <ArrowRight
-                        className="mt-1 size-4 shrink-0 text-gold transition-transform group-hover:translate-x-1"
+                        className="mt-1 size-4 shrink-0 text-brand-400 transition-transform group-hover:translate-x-1"
                         aria-hidden="true"
                       />
                     </Link>
@@ -147,7 +147,7 @@ export default function ServicesPage() {
                         </span>
                       </span>
                       <ArrowRight
-                        className="mt-1 size-4 shrink-0 text-gold transition-transform group-hover:translate-x-1"
+                        className="mt-1 size-4 shrink-0 text-brand-400 transition-transform group-hover:translate-x-1"
                         aria-hidden="true"
                       />
                     </Link>

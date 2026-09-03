@@ -41,7 +41,7 @@ export function ServicesOverview() {
                   {service.description}
                 </p>
                 {service.href ? (
-                  <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-colors group-hover:text-brand-400">
+                  <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-colors group-hover:text-brand-500">
                     Learn more
                     <ArrowRight className="size-4" aria-hidden="true" />
                   </span>
@@ -54,7 +54,7 @@ export function ServicesOverview() {
         <p className="mt-12 text-center">
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-400"
+            className="inline-flex items-center gap-2 font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-500"
           >
             See all primary care services
             <ArrowRight className="size-4" aria-hidden="true" />

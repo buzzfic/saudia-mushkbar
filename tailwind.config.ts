@@ -4,6 +4,12 @@ import type { Config } from "tailwindcss";
  * Design tokens extracted from the live WordPress site's Elementor global kit
  * (wp-content/uploads/elementor/css/post-41.css). Colours and the type scale
  * are the site's own — nothing here is invented.
+ *
+ * The palette is deliberately narrow: one hue family (brand teal) carries
+ * structure and text, one warm accent (peach) provides contrast, and red is
+ * reserved for the call-the-office action. The kit's olive-gold and mint were
+ * dropped — with teal, peach and red already in play they made a fourth and
+ * fifth hue competing on the same screen.
  */
 const config: Config = {
   content: [
@@ -33,18 +39,23 @@ const config: Config = {
           800: "#1F2E30",
           900: "#182324",
         },
-        /** #F7C99B — warm peach used for buttons and highlights. */
+        /**
+         * #F7C99B — the single warm accent. `soft` tints panels, `strong` is
+         * the readable end of the same family, used for rating stars and small
+         * decorative marks.
+         */
         accent: {
           DEFAULT: "#F7C99B",
           soft: "#FEF1E9",
           strong: "#EBA96B",
         },
-        /** #AD9771 — muted gold used for secondary accents. */
-        gold: "#AD9771",
-        /** #EA292D — the red used inside the hero headline. */
+        /**
+         * #EA292D — reserved. The original site set the Medicare announcement
+         * headline in this red; here it also marks the one action that matters
+         * most, calling the office. Nothing else uses it.
+         */
         alert: "#EA292D",
         cream: "#FCF7ED",
-        mint: "#EAF6E8",
         ink: "#272626",
         body: "#625A53",
         canvas: "#FDFCFA",

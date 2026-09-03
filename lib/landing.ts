@@ -71,7 +71,6 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Feeling unwell today? Dr. Saudia Mushkbar, MD offers same-day appointments in Toledo for urgent, non-emergency concerns like colds, flu, sore throat and infections.",
     serviceName: "Same-day primary care visit",
-    accent: "alert",
     badge: { label: "Same-Day Care", icon: "CalendarClock" },
     headingLead: "Same-Day",
     headingAccent: "Primary Care",
@@ -143,7 +142,6 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Dr. Saudia Mushkbar, MD is a board-certified family medicine physician providing primary care for children, adults and seniors in Toledo and Northwest Ohio.",
     serviceName: "Primary care",
-    accent: "brand",
     badge: { label: "Primary Care", icon: "Stethoscope" },
     headingLead: "Your Primary Care",
     headingAccent: "Doctor in Toledo",
@@ -196,7 +194,6 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Dr. Saudia Mushkbar, MD provides primary care for women in Toledo — routine exams, contraception counseling, menopause support and chronic condition management.",
     serviceName: "Women’s primary care",
-    accent: "gold",
     badge: { label: "Women’s Primary Care", icon: "Flower2" },
     headingLead: "Women’s",
     headingAccent: "Primary Care",
@@ -264,7 +261,6 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Dr. Saudia Mushkbar, MD provides primary care for type 1 and type 2 diabetes in Toledo — blood sugar monitoring, A1C testing, medication and lifestyle support.",
     serviceName: "Diabetes management",
-    accent: "alert",
     badge: { label: "Diabetes Care", icon: "Droplet" },
     headingLead: "Diabetes",
     headingAccent: "Primary Care",
@@ -330,7 +326,6 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Dr. Saudia Mushkbar, MD manages high blood pressure and hypertension in Toledo — regular monitoring, medication management and lifestyle support.",
     serviceName: "Hypertension management",
-    accent: "alert",
     badge: { label: "Blood Pressure Care", icon: "HeartPulse" },
     headingLead: "High Blood Pressure",
     headingAccent: "& Hypertension Care",
@@ -395,7 +390,6 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Schedule your Medicare Annual Wellness Visit with Dr. Saudia Mushkbar, MD in Toledo — a yearly review of your health history, medications and preventive care plan.",
     serviceName: "Medicare Annual Wellness Visit",
-    accent: "gold",
     badge: { label: "Medicare Wellness", icon: "ClipboardCheck" },
     headingLead: "Medicare Annual",
     headingAccent: "Wellness Visit",
@@ -473,7 +467,6 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Book your annual physical with Dr. Saudia Mushkbar, MD in Toledo — a comprehensive yearly checkup for adults and children with screenings and vaccinations.",
     serviceName: "Annual physical examination",
-    accent: "brand",
     badge: { label: "Annual Physical", icon: "ClipboardCheck" },
     headingLead: "Annual Physical &",
     headingAccent: "Wellness Exam",
@@ -539,7 +532,6 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Dr. Saudia Mushkbar, MD provides primary care for older adults in Toledo — healthy aging, medication management, chronic disease support and Medicare wellness visits.",
     serviceName: "Senior primary care",
-    accent: "gold",
     badge: { label: "Senior Care", icon: "HeartHandshake" },
     headingLead: "Senior",
     headingAccent: "Primary Care",
@@ -605,7 +597,6 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Changing your Medicare primary care doctor is simple. Dr. Saudia Mushkbar, MD is accepting new Medicare and Medicare Advantage patients in Toledo, Ohio.",
     serviceName: "Medicare primary care physician transfer",
-    accent: "brand",
     headingLead: "Switch Your Medicare PCP",
     headingAccent: "to Dr. Mushkbar",
     tagline: "Better care. More time. A healthier you.",
@@ -679,7 +670,6 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Recently discharged from the hospital or ER? Dr. Saudia Mushkbar, MD offers prompt follow-up appointments in Toledo to review medications and next steps.",
     serviceName: "Hospital discharge follow-up visit",
-    accent: "brand",
     badge: { label: "Follow-Up Care", icon: "Hospital" },
     headingLead: "Hospital",
     headingAccent: "Follow-Up Care",
@@ -750,7 +740,6 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Dr. Saudia Mushkbar, MD is accepting new patients of all ages in Toledo, Ohio. Most insurance plans accepted, with same-day and same-week appointments available.",
     serviceName: "New patient appointment",
-    accent: "brand",
     headingLead: "New Patients",
     headingAccent: "Welcome",
     tagline: "Compassionate care for you and your family.",
@@ -825,7 +814,6 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Dr. Saudia Mushkbar, MD offers GLP-1 programs and personalized weight loss and wellness plans in Toledo, Ohio, as part of your primary care.",
     serviceName: "Medical weight management",
-    accent: "gold",
     badge: { label: "Weight Loss & Wellness", icon: "Scale" },
     headingLead: "Weight Loss",
     headingAccent: "& Wellness",

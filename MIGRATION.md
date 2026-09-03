@@ -131,9 +131,9 @@ site had a placeholder, it was dropped rather than invented:
   when they exist.
 - **Newsletter** — the footer had a "Subscribe to Our Newsletter" heading with no
   form rendered behind it. Omitted.
-- **Contact form** — the old site had none; appointments were booked by phone.
-  A validated request form was added as an *additional* path, with the phone
-  number kept as the primary CTA.
+- **Contact form** — the old site had none; appointments were booked by phone,
+  and that is preserved. Every call to action dials the office directly, and
+  `/contact` carries the number, address, hours, map and directions.
 - **Office hours** — not published anywhere on the live site. The values in
   `lib/constants.ts` (`Mon–Fri 8:00 AM – 5:00 PM`, weekends closed) came from the
   client-supplied layout mockups and are flagged `PENDING CLIENT CONFIRMATION`.
@@ -174,7 +174,6 @@ describe their contents, e.g. `home-2-1.png` → `doctor-saudia-mushkbar-hero.pn
 | Redirects | all 301, all single-hop |
 | `robots.txt` / `sitemap.xml` | both served, sitemap lists 17 canonical URLs |
 | Structured data | 4 blocks on the homepage, 6 on inner pages |
-| Contact form | server-side validation verified; refuses honestly when email delivery is unconfigured |
 | Google Maps embed | loads (keyless embed, no API key exposed) |
 
 External links from the original site were re-checked; PubMed, The Hospitalist,

@@ -49,7 +49,7 @@ export function LandingClosing({
                       ) : null}
                     </span>
                     <ArrowRight
-                      className="mt-1 size-4 shrink-0 text-gold transition-transform group-hover:translate-x-1"
+                      className="mt-1 size-4 shrink-0 text-brand-400 transition-transform group-hover:translate-x-1"
                       aria-hidden="true"
                     />
                   </Link>
@@ -64,12 +64,12 @@ export function LandingClosing({
         <Container>
           <div className="flex flex-col items-center gap-5 rounded-card bg-accent-soft px-8 py-10 text-center sm:flex-row sm:text-left">
             <Heart
-              className="size-10 shrink-0 text-gold"
+              className="size-10 shrink-0 text-accent-strong"
               aria-hidden="true"
             />
             <p className="text-[1.0625rem] leading-relaxed text-brand">
               {lead}
-              <span className="mt-1 block font-display text-xl italic text-gold">
+              <span className="mt-1 block font-display text-xl italic text-brand-500">
                 {script}
               </span>
             </p>

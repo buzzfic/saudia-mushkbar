@@ -24,7 +24,7 @@ const buttonVariants = cva(
         "outline-light":
           "border border-white/50 bg-transparent text-white hover:bg-white hover:text-brand",
         ghost: "text-brand hover:bg-brand-50",
-        link: "text-brand underline underline-offset-4 hover:text-brand-400",
+        link: "text-brand underline underline-offset-4 hover:text-brand-500",
       },
       size: {
         sm: "h-10 px-3.5 text-sm sm:px-4",
