@@ -3,13 +3,31 @@ import { SITE_URL, PRACTICE } from "@/lib/constants";
 
 /**
  * The canonical origin. Configurable so preview deployments can be pointed at
- * themselves, but it defaults to the production domain so a missing env var can
- * never canonicalise the site to a Vercel preview URL or to localhost.
+ * themselves, but it falls back to the production domain so a missing, empty or
+ * malformed env var can never canonicalise the site to a preview URL, to
+ * localhost, or to nothing at all.
+ *
+ * `??` alone is not enough here: a host that defines NEXT_PUBLIC_SITE_URL with
+ * no value hands us an empty string, which is not nullish and would reach
+ * `new URL("")` and throw during the build.
  */
-export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? SITE_URL).replace(
-  /\/$/,
-  "",
-);
+function resolveSiteUrl(): string {
+  const configured = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (!configured) return SITE_URL;
+
+  // Some hosts expose the deployment host without a scheme.
+  const withScheme = /^https?:\/\//i.test(configured)
+    ? configured
+    : `https://${configured}`;
+
+  try {
+    return new URL(withScheme).origin;
+  } catch {
+    return SITE_URL;
+  }
+}
+
+export const siteUrl = resolveSiteUrl();
 
 /** Shared Open Graph image, generated at /opengraph-image. */
 const OG_IMAGE = {
