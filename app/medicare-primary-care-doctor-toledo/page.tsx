@@ -1,20 +1,18 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Check, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 
-import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 import { Container } from "@/components/common/Container";
 import { Icon } from "@/components/common/Icon";
 import { InsuranceLogos } from "@/components/common/InsuranceLogos";
 import { JsonLd } from "@/components/common/JsonLd";
 import { ReviewBadges } from "@/components/common/ReviewBadges";
 import { SectionHeading } from "@/components/common/SectionHeading";
-import { Button } from "@/components/ui/button";
+import { LandingHero } from "@/components/landing/LandingHero";
 import { LocationCard } from "@/components/sections/LocationCard";
 import { FinalCTA } from "@/components/sections/FinalCTA";
-import { CTA } from "@/lib/constants";
 import { copy, medicareAssurances, medicareServices } from "@/lib/content";
+import type { LandingHeroData } from "@/lib/landing-types";
 import { medicarePages } from "@/lib/navigation";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbList, medicalWebPage } from "@/lib/structured-data";
@@ -42,12 +40,26 @@ const crumbs = [
   { name: "Medicare", path },
 ];
 
-const heroPoints = [
-  "20+ Years of Experience",
-  "Board Certified in Family Medicine",
-  "Accepting New Patients",
-  "Same-Day & Same-Week Appointments",
-];
+const hero: LandingHeroData = {
+  headingLead: "Medicare Primary Care",
+  headingAccent: "Doctor in Toledo, OH",
+  tagline: "Now Accepting New Medicare & Medicare Advantage Patients",
+  intro: copy.medicareIntro,
+  checklist: [
+    "Same-Day & Same-Week Appointments",
+    "Accepting New Medicare & Medicare Advantage Patients",
+    "Board Certified in Family Medicine",
+    "20+ Years of Experience",
+  ],
+  image: {
+    src: "/images/doctor/primary-care.jpg",
+    // The panel is part of the image file, so its wording has to live in the
+    // alt text — otherwise screen readers and crawlers get none of it.
+    alt: "Dr. Saudia Mushkbar, MD in her Toledo, Ohio family medicine office, beside a panel headed “We Help You” listing: monitor and manage blood pressure, lower your risk of heart attack and stroke, create a personalized treatment plan, improve your lifestyle and overall health, and feel your best every day",
+    width: 1024,
+    height: 1536,
+  },
+};
 
 const experiencePoints = [
   "20+ Years of Experience",
@@ -70,62 +82,7 @@ export default function MedicarePrimaryCarePage() {
         ]}
       />
 
-      <section className="bg-gradient-to-b from-cream to-canvas pb-16 pt-10 lg:pb-20 lg:pt-14">
-        <Container>
-          <Breadcrumbs items={crumbs} />
-
-          <div className="mt-10 grid items-start gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 [&>*]:min-w-0">
-            <div>
-              <h1 className="text-display-1">
-                Medicare Primary Care Doctor in Toledo
-              </h1>
-              <p className="mt-5 font-display text-display-4 text-alert">
-                Now Accepting New Medicare &amp; Medicare Advantage Patients
-              </p>
-              <span aria-hidden="true" className="mt-6 block h-0.5 w-16 bg-accent" />
-              <p className="mt-6 max-w-prose text-[1.0625rem] leading-relaxed text-body">
-                {copy.medicareIntro}
-              </p>
-
-              <ul className="mt-9 flex flex-col gap-3">
-                {heroPoints.map((point) => (
-                  <li key={point} className="flex items-start gap-3">
-                    <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-accent text-brand">
-                      <Check className="size-3" aria-hidden="true" />
-                    </span>
-                    <span className="text-[1.0625rem] text-brand">{point}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-                <Button asChild variant="alert" size="lg">
-                  <a href={CTA.callHref}>
-                    <Phone className="size-4" aria-hidden="true" />
-                    {CTA.callLabel}
-                  </a>
-                </Button>
-                <Button asChild variant="brand" size="lg">
-                  <Link href={CTA.contactHref}>
-                    <MapPin className="size-4" aria-hidden="true" />
-                    {CTA.contactLabel}
-                  </Link>
-                </Button>
-              </div>
-            </div>
-
-            <Image
-              src="/images/doctor/doctor-saudia-mushkbar-scrubs.jpeg"
-              alt="Dr. Saudia Mushkbar, MD, Medicare primary care doctor in Toledo, Ohio"
-              width={899}
-              height={1320}
-              priority
-              sizes="(max-width: 1024px) 90vw, 42vw"
-              className="mx-auto aspect-[4/5] w-full max-w-md rounded-card object-cover object-top shadow-card lg:mx-0 lg:max-w-none"
-            />
-          </div>
-        </Container>
-      </section>
+      <LandingHero data={hero} crumbs={crumbs} />
 
       <section className="bg-white py-20 lg:py-24">
         <Container>

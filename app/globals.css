@@ -14,7 +14,7 @@
     --font-mono: var(--font-space-mono, ui-monospace, monospace);
 
     /* Brand tokens, mirrored from tailwind.config.ts for use in raw CSS. */
-    --brand: #2f4749;
+    --brand: #053228;
     --accent: #f7c99b;
     --canvas: #fdfcfa;
     --hairline: #eae6df;

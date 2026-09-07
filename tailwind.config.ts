@@ -25,19 +25,24 @@ const config: Config = {
     },
     extend: {
       colors: {
-        /** #2F4749 — deep teal, the primary brand colour. */
+        /**
+         * #053228 — deep forest green, the primary brand colour. 13.7:1 on the
+         * page background. 400 is for decorative icons (3.7:1, over the 3:1
+         * graphics threshold) and 500 for eyebrow text and link hovers
+         * (5.7:1, over the 4.5:1 text threshold).
+         */
         brand: {
-          DEFAULT: "#2F4749",
-          50: "#F2F6F6",
-          100: "#DFE9E9",
-          200: "#BFD2D2",
-          300: "#93B0B1",
-          400: "#628788",
-          500: "#446365",
-          600: "#2F4749",
-          700: "#273B3D",
-          800: "#1F2E30",
-          900: "#182324",
+          DEFAULT: "#053228",
+          50: "#F3F5F4",
+          100: "#E1E6E5",
+          200: "#C3CECB",
+          300: "#96A9A5",
+          400: "#6E8882",
+          500: "#4B6B64",
+          600: "#053228",
+          700: "#042B22",
+          800: "#04231C",
+          900: "#031C16",
         },
         /**
          * #F7C99B — the single warm accent. `soft` tints panels, `strong` is
@@ -50,9 +55,9 @@ const config: Config = {
           strong: "#EBA96B",
         },
         /**
-         * #EA292D — reserved. The original site set the Medicare announcement
-         * headline in this red; here it also marks the one action that matters
-         * most, calling the office. Nothing else uses it.
+         * #EA292D — the original site's red. Used for the second line of a
+         * split hero headline, and for the one action that matters most:
+         * calling the office. Nothing else uses it.
          */
         alert: "#EA292D",
         cream: "#FCF7ED",
@@ -80,6 +85,9 @@ const config: Config = {
         // Fluid heading scale matching the WordPress kit's desktop sizes
         // (h1 76px, h2 60px, h3 46px, h4 32px) with sensible mobile floors.
         "display-1": ["clamp(2.25rem, 1.35rem + 4.5vw, 4.75rem)", { lineHeight: "1.06", letterSpacing: "-0.01em" }],
+        // Split hero headlines: two long lines need a lower ceiling than a
+        // single-line H1 so neither half wraps again.
+        "display-hero": ["clamp(2.25rem, 1.45rem + 3.6vw, 4rem)", { lineHeight: "1.06", letterSpacing: "-0.01em" }],
         "display-2": ["clamp(1.875rem, 1.2rem + 3.4vw, 3.75rem)", { lineHeight: "1.1", letterSpacing: "-0.01em" }],
         "display-3": ["clamp(1.625rem, 1.2rem + 2.1vw, 2.875rem)", { lineHeight: "1.15" }],
         "display-4": ["clamp(1.375rem, 1.1rem + 1.1vw, 2rem)", { lineHeight: "1.25" }],

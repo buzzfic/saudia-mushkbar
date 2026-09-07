@@ -53,7 +53,8 @@ export type LandingPageData = {
   /** Or a tick list, used on the "New Patients" and "Switch PCP" layouts. */
   checklist?: string[];
 
-  aside: LandingAside;
+  /** Optional floating card over the portrait. Omit to show the photo alone. */
+  aside?: LandingAside;
   image: { src: string; alt: string; width: number; height: number };
 
   /** The wide icon grid: "Comprehensive … Services". */
@@ -67,3 +68,21 @@ export type LandingPageData = {
   /** Paths of related pages linked at the foot of the page. */
   related: string[];
 };
+
+/**
+ * The subset of a landing page that the hero renders. Split out so bespoke
+ * pages — the Medicare page — can share the same hero without inventing grid,
+ * steps or closing content they do not use.
+ */
+export type LandingHeroData = Pick<
+  LandingPageData,
+  | "badge"
+  | "headingLead"
+  | "headingAccent"
+  | "tagline"
+  | "intro"
+  | "points"
+  | "checklist"
+  | "aside"
+  | "image"
+>;

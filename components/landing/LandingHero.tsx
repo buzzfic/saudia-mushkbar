@@ -8,13 +8,12 @@ import { Icon } from "@/components/common/Icon";
 import { StarRating } from "@/components/common/ReviewBadges";
 import { Button } from "@/components/ui/button";
 import { CTA, REVIEWS } from "@/lib/constants";
-import type { LandingPageData } from "@/lib/landing-types";
+import type { LandingHeroData } from "@/lib/landing-types";
 import { cn } from "@/lib/utils";
 
 const trustItems = [
-  { icon: "ShieldCheck", title: "Board-Certified", body: "in Family Medicine" },
   { icon: "UserRound", title: "20+ Years", body: "of clinical experience" },
-  { icon: "CalendarClock", title: "Same-Day & Same-Week", body: "appointments available" },
+  { icon: "ShieldCheck", title: "Board-Certified", body: "in Family Medicine" },
   { icon: "HeartHandshake", title: "Trusted Care", body: "for Toledo families" },
 ];
 
@@ -22,7 +21,7 @@ export function LandingHero({
   data,
   crumbs,
 }: {
-  data: LandingPageData;
+  data: LandingHeroData;
   crumbs: Crumb[];
 }) {
   return (
@@ -30,7 +29,7 @@ export function LandingHero({
       <Container>
         <Breadcrumbs items={crumbs} />
 
-        <div className="mt-10 grid items-start gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 [&>*]:min-w-0">
+        <div className="mt-10 grid items-start gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14 [&>*]:min-w-0">
           <div>
             {data.badge ? (
               <p
@@ -41,9 +40,9 @@ export function LandingHero({
               </p>
             ) : null}
 
-            <h1 className={cn("text-display-1", data.badge ? "mt-6" : "mt-0")}>
+            <h1 className={cn("text-display-hero", data.badge ? "mt-6" : "mt-0")}>
               <span className="block">{data.headingLead}</span>{" "}
-              <span className="block text-brand-500">{data.headingAccent}</span>
+              <span className="block text-alert">{data.headingAccent}</span>
             </h1>
 
             <p className="mt-5 font-display text-display-4 text-brand-500">
@@ -119,77 +118,79 @@ export function LandingHero({
               className="mx-auto aspect-[4/5] w-full max-w-md rounded-card object-cover object-top shadow-card lg:mx-0 lg:max-w-none"
             />
 
-            <div className="mt-6 rounded-card border border-hairline bg-white p-6 shadow-card sm:p-7 lg:absolute lg:-bottom-6 lg:-left-10 lg:mt-0 lg:w-[21rem]">
-              {data.aside.kind === "checklist" ? (
-                <>
-                  <h2 className="font-display text-xl leading-snug text-brand">
-                    {data.aside.title}
-                  </h2>
-                  <ul className="mt-4 flex flex-col gap-2.5">
-                    {data.aside.items.map((item) => (
-                      <li
-                        key={item}
-                        className="flex items-start gap-2.5 text-[0.9375rem] leading-snug text-body"
-                      >
-                        <Check
-                          className="mt-1 size-3.5 shrink-0 text-brand"
-                          aria-hidden="true"
-                        />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  {data.aside.note ? (
-                    <div className="mt-5 border-t border-hairline pt-5">
-                      <p className="font-display text-lg text-brand">
-                        {data.aside.note.title}
-                      </p>
-                      <p className="mt-1 text-sm leading-relaxed text-body">
-                        {data.aside.note.body}
-                      </p>
-                    </div>
-                  ) : null}
-                </>
-              ) : (
-                <>
-                  <h2 className="sr-only">Why patients trust Dr. Mushkbar</h2>
-                  <ul className="flex flex-col gap-5">
-                    <li className="flex items-start gap-3">
-                      <span className="grid size-9 shrink-0 place-items-center rounded-full bg-accent-soft text-brand">
-                        <Icon name="Heart" className="size-4" />
-                      </span>
-                      <span>
-                        <span className="block text-[0.9375rem] font-medium text-brand">
-                          {REVIEWS.google.rating} Google rating
-                        </span>
-                        <StarRating
-                          rating={REVIEWS.google.ratingValue}
-                          className="mt-1"
-                        />
-                        <span className="mt-1 block text-sm text-body">
-                          {REVIEWS.google.count} reviews
-                        </span>
-                      </span>
-                    </li>
-                    {trustItems.map((item) => (
-                      <li key={item.title} className="flex items-start gap-3">
+            {data.aside ? (
+              <div className="mt-6 rounded-card border border-hairline bg-white p-6 shadow-lift sm:p-7 lg:absolute lg:right-3 lg:top-1/2 lg:mt-0 lg:w-[17.5rem] lg:-translate-y-1/2 lg:p-6">
+                {data.aside.kind === "checklist" ? (
+                  <>
+                    <h2 className="font-display text-xl leading-snug text-brand">
+                      {data.aside.title}
+                    </h2>
+                    <ul className="mt-4 flex flex-col gap-2.5">
+                      {data.aside.items.map((item) => (
+                        <li
+                          key={item}
+                          className="flex items-start gap-2.5 text-[0.9375rem] leading-snug text-body"
+                        >
+                          <Check
+                            className="mt-1 size-3.5 shrink-0 text-brand"
+                            aria-hidden="true"
+                          />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    {data.aside.note ? (
+                      <div className="mt-5 border-t border-hairline pt-5">
+                        <p className="font-display text-lg text-brand">
+                          {data.aside.note.title}
+                        </p>
+                        <p className="mt-1 text-sm leading-relaxed text-body">
+                          {data.aside.note.body}
+                        </p>
+                      </div>
+                    ) : null}
+                  </>
+                ) : (
+                  <>
+                    <h2 className="sr-only">Why patients trust Dr. Mushkbar</h2>
+                    <ul className="flex flex-col gap-5">
+                      <li className="flex items-start gap-3">
                         <span className="grid size-9 shrink-0 place-items-center rounded-full bg-accent-soft text-brand">
-                          <Icon name={item.icon} className="size-4" />
+                          <Icon name="Heart" className="size-4" />
                         </span>
                         <span>
                           <span className="block text-[0.9375rem] font-medium text-brand">
-                            {item.title}
+                            {REVIEWS.google.rating} Google rating
                           </span>
-                          <span className="block text-sm text-body">
-                            {item.body}
+                          <StarRating
+                            rating={REVIEWS.google.ratingValue}
+                            className="mt-1"
+                          />
+                          <span className="mt-1 block text-sm text-body">
+                            {REVIEWS.google.count} reviews
                           </span>
                         </span>
                       </li>
-                    ))}
-                  </ul>
-                </>
-              )}
-            </div>
+                      {trustItems.map((item) => (
+                        <li key={item.title} className="flex items-start gap-3">
+                          <span className="grid size-9 shrink-0 place-items-center rounded-full bg-accent-soft text-brand">
+                            <Icon name={item.icon} className="size-4" />
+                          </span>
+                          <span>
+                            <span className="block text-[0.9375rem] font-medium text-brand">
+                              {item.title}
+                            </span>
+                            <span className="block text-sm text-body">
+                              {item.body}
+                            </span>
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+              </div>
+            ) : null}
           </div>
         </div>
       </Container>

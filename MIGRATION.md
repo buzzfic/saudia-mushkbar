@@ -100,7 +100,7 @@ Taken from the Elementor global kit
 
 | Token | Value | Use |
 | --- | --- | --- |
-| `brand` | `#2F4749` | Primary deep teal |
+| `brand` | `#053228` | Primary deep green (was `#2F4749` in the Elementor kit; changed at the client's request) |
 | `accent` | `#F7C99B` | Warm peach buttons and highlights |
 | `gold` | `#AD9771` | Eyebrow labels, small accents |
 | `alert` | `#EA292D` | The red used inside the hero headline, now also the call CTA |
