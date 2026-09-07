@@ -52,13 +52,10 @@ const hero: LandingHeroData = {
     "20+ Years of Experience",
   ],
   image: {
-    src: "/images/doctor/doctor-primary-care.jpg",
-    // The trust panel is part of the image file, so its wording has to live in
-    // the alt text — none of it is otherwise available to screen readers or
-    // crawlers. This is also why the hero omits its own floating card.
-    alt: "Dr. Saudia Mushkbar, MD in her Toledo, Ohio family medicine office, beside a panel reading: 5.0 Google rating from 244+ reviews, 20+ years of clinical experience, board-certified in Family Medicine, and trusted care for Toledo families",
-    width: 1145,
-    height: 1374,
+    src: "/images/doctor/medicare-primary-care-doctor-toledo.jpg",
+    alt: "Dr. Saudia Mushkbar, MD beside a panel headed “Medicare Primary Care Doctor in Toledo”, listing that she welcomes Medicare and Medicare Advantage patients and provides preventive care and annual wellness visits, chronic disease management, medication management, and a caring partner in your health",
+    width: 1224,
+    height: 1285,
   },
 };
 

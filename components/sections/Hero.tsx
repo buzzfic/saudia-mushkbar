@@ -6,7 +6,6 @@ import { Container } from "@/components/common/Container";
 import { InsuranceLogos } from "@/components/common/InsuranceLogos";
 import { Button } from "@/components/ui/button";
 import { CTA } from "@/lib/constants";
-import { insuranceSummary } from "@/lib/content";
 
 /**
  * Homepage hero, reproducing the original section: the "NOW" rule, the split
@@ -25,7 +24,7 @@ export function Hero() {
               <span className="rule-line w-16" />
             </p>
 
-            <h1 className="mt-6 text-display-1">
+            <h1 className="mt-6 text-display-hero">
               <span className="block">Accepting New</span>{" "}
               <span className="block text-alert">
                 Medicare &amp; Medicare Advantage Patients
@@ -38,9 +37,8 @@ export function Hero() {
 
             <span aria-hidden="true" className="mt-7 block h-0.5 w-16 bg-accent" />
 
-            <p className="mt-6 max-w-prose text-[1.0625rem] leading-relaxed text-body">
-              {insuranceSummary}
-            </p>
+            <InsuranceLogos className="mt-8 max-w-lg gap-x-8 lg:grid-cols-3" priority />
+            <p className="mt-5 text-[0.9375rem] text-body">&amp; others.</p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button asChild variant="alert" size="lg">
@@ -91,15 +89,6 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-hairline pt-12">
-          <h2 className="text-center font-mono text-eyebrow uppercase tracking-[0.14em] text-brand-500">
-            In-network with leading plans
-          </h2>
-          <InsuranceLogos className="mt-8" priority />
-          <p className="mt-6 text-center font-display text-2xl text-brand">
-            + Others
-          </p>
-        </div>
       </Container>
     </section>
   );

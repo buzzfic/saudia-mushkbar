@@ -24,12 +24,22 @@ export function LandingHero({
   data: LandingHeroData;
   crumbs: Crumb[];
 }) {
+  // These hero images are composed graphics with readable text inside them. A
+  // landscape one squeezed into a 45%-wide column renders that text far too
+  // small, so wide images get the full content width beneath the copy instead.
+  const isWide = data.image.width >= data.image.height;
+
   return (
     <section className="bg-gradient-to-b from-cream to-canvas pb-16 pt-10 lg:pb-20 lg:pt-14">
       <Container>
         <Breadcrumbs items={crumbs} />
 
-        <div className="mt-10 grid items-start gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14 [&>*]:min-w-0">
+        <div
+          className={cn(
+            "mt-10 grid items-start gap-12 [&>*]:min-w-0",
+            isWide ? "lg:gap-10" : "lg:grid-cols-[1.1fr_0.9fr] lg:gap-14",
+          )}
+        >
           <div>
             {data.badge ? (
               <p
@@ -114,8 +124,11 @@ export function LandingHero({
               width={data.image.width}
               height={data.image.height}
               priority
-              sizes="(max-width: 1024px) 90vw, 42vw"
-              className="mx-auto aspect-[4/5] w-full max-w-md rounded-card object-cover object-top shadow-card lg:mx-0 lg:max-w-none"
+              sizes={isWide ? "(max-width: 1024px) 92vw, 1400px" : "(max-width: 1024px) 90vw, 48vw"}
+              className={cn(
+                "mx-auto h-auto w-full rounded-card shadow-card",
+                isWide ? "max-w-none" : "max-w-md lg:mx-0 lg:max-w-none",
+              )}
             />
 
             {data.aside ? (

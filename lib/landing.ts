@@ -17,36 +17,6 @@ const WHITE_COAT = {
   height: 2560,
 } as const;
 
-const SCRUBS = {
-  src: "/images/doctor/doctor-saudia-mushkbar-scrubs.jpeg",
-  alt: "Dr. Saudia Mushkbar, MD, family medicine physician in Toledo, Ohio, wearing navy scrubs with a stethoscope",
-  width: 899,
-  height: 1320,
-} as const;
-
-const BLOOD_PRESSURE = {
-  src: "/images/doctor/high-blood-pressure-doctor-toledo.jpg",
-  // The panel is part of the image file, so its wording has to live here —
-  // none of it is otherwise available to screen readers or crawlers.
-  alt: "Dr. Saudia Mushkbar, MD in her Toledo, Ohio family medicine office, beside a panel headed “We Help You” reading: monitor and manage blood pressure, lower your risk of heart attack and stroke, create a personalized treatment plan, improve your lifestyle and overall health, and feel your best every day",
-  width: 1024,
-  height: 1536,
-} as const;
-
-const SENIOR_VISIT = {
-  src: "/images/general/family-medicine-care-2.png",
-  alt: "A clinician sitting with an older adult patient during a primary care visit",
-  width: 570,
-  height: 840,
-} as const;
-
-const CONSULT = {
-  src: "/images/general/family-medicine-care-1.webp",
-  alt: "A patient talking with her doctor during a primary care appointment",
-  width: 570,
-  height: 840,
-} as const;
-
 /** Reasons shared by most pages, phrased from facts published on the site. */
 const commonReasons = [
   {
@@ -92,24 +62,12 @@ export const landingPages: LandingPageData[] = [
       { title: "Compassionate care", description: "Every visit matters.", icon: "HandHeart" },
       { title: "One familiar practice", description: "Follow-up with your own doctor.", icon: "Stethoscope" },
     ],
-    aside: {
-      kind: "checklist",
-      title: "Get care today for:",
-      items: [
-        "Cold, flu & cough",
-        "Sore throat",
-        "Ear pain",
-        "Urinary symptoms",
-        "Rashes & skin issues",
-        "Minor injuries",
-        "And more",
-      ],
-      note: {
-        title: "In an emergency",
-        body: "For life-threatening emergencies please call 911 or go to the nearest emergency room.",
-      },
+    image: {
+      src: "/images/doctor/same-day-primary-care-toledo.jpg",
+      alt: "Dr. Saudia Mushkbar, MD in her Toledo office beside a panel headed “Same-Day Appointments Available”, listing common reasons for a same-day visit: cold, flu and cough; sore throat; ear pain; urinary symptoms; rashes and skin issues; minor injuries; and more — with the office number, 419-517-7687",
+      width: 1224,
+      height: 1285,
     },
-    image: WHITE_COAT,
     grid: {
       title: "Comprehensive Primary Care Services",
       items: [
@@ -215,20 +173,12 @@ export const landingPages: LandingPageData[] = [
       { title: "Same-day & same-week appointments", icon: "CalendarClock" },
       { title: "Compassionate, respectful support", icon: "MessageCircleHeart" },
     ],
-    aside: {
-      kind: "checklist",
-      title: "Care for women at every stage",
-      items: [
-        "Annual wellness exams",
-        "Routine gynecological exams",
-        "Menstrual & hormonal health",
-        "Contraception counseling",
-        "Family planning",
-        "Menopause support",
-        "Management of chronic conditions",
-      ],
+    image: {
+      src: "/images/doctor/womens-primary-care-doctor-toledo.jpg",
+      alt: "Dr. Saudia Mushkbar, MD with a patient beside a panel headed “Women’s Health Care At Every Stage of Life”, listing annual wellness exams, pap smears and breast exams, menstrual and hormonal health, contraception counseling, preconception and pregnancy planning, menopause support, bone health screening, management of chronic conditions, and personalized care for all women",
+      width: 1536,
+      height: 1024,
     },
-    image: SCRUBS,
     grid: {
       title: "Comprehensive Women’s Health Services",
       items: [
@@ -282,21 +232,12 @@ export const landingPages: LandingPageData[] = [
       { title: "Whole-person care", description: "Nutrition, lifestyle and medication support.", icon: "Apple" },
       { title: "Ongoing support", description: "Regular follow-ups and same-day access.", icon: "CalendarCheck" },
     ],
-    aside: {
-      kind: "checklist",
-      title: "Diabetes care includes:",
-      items: [
-        "Diabetes management (type 1 & type 2)",
-        "Blood sugar monitoring & A1C testing",
-        "Medication management",
-        "Nutrition & lifestyle counseling",
-        "Weight management",
-        "Screening for diabetes complications",
-        "Foot care & education",
-        "Coordination with specialists",
-      ],
+    image: {
+      src: "/images/doctor/diabetes-doctor-toledo.jpg",
+      alt: "Dr. Saudia Mushkbar, MD in her Toledo office beside a panel headed “Diabetes Care”, listing blood sugar monitoring, medication management, nutrition and lifestyle guidance, preventing complications, and ongoing support",
+      width: 1224,
+      height: 1285,
     },
-    image: WHITE_COAT,
     grid: {
       title: "Comprehensive Diabetes Care Services",
       items: [
@@ -349,7 +290,12 @@ export const landingPages: LandingPageData[] = [
     ],
     // No floating card: the portrait carries its own "We Help You" panel, so a
     // second card on top would stack one over the other.
-    image: BLOOD_PRESSURE,
+    image: {
+      src: "/images/doctor/high-blood-pressure-doctor-toledo.jpg",
+      alt: "Dr. Saudia Mushkbar, MD in her Toledo office beside a panel headed “Take Control of Your Blood Pressure”, listing accurate blood pressure checks, a personalized treatment plan, lowering your risk, lifestyle support, medication management, and ongoing follow-up",
+      width: 1024,
+      height: 1536,
+    },
     grid: {
       title: "Comprehensive Hypertension Care",
       items: [
@@ -400,26 +346,12 @@ export const landingPages: LandingPageData[] = [
       { title: "Early detection", description: "Identify risks and catch problems early.", icon: "Microscope" },
       { title: "A plan for the year", description: "Clear next steps you can follow.", icon: "CalendarCheck" },
     ],
-    aside: {
-      kind: "checklist",
-      title: "Your annual wellness visit may include:",
-      items: [
-        "Review of your medical history",
-        "Update of your medications",
-        "Blood pressure & vitals check",
-        "Cognitive health assessment",
-        "Depression screening",
-        "Fall risk assessment",
-        "Preventive screenings",
-        "Health education & counseling",
-        "A personalized prevention plan",
-      ],
-      note: {
-        title: "Confirm your plan",
-        body: "Coverage and network status vary by plan. Call the office and we will confirm your specific Medicare or Medicare Advantage plan.",
-      },
+    image: {
+      src: "/images/doctor/medicare-annual-wellness-visit-toledo.jpg",
+      alt: "Dr. Saudia Mushkbar, MD with an older patient beside a panel headed “Your Annual Wellness Visit”, listing review of your health history, updating your medications, checking vital signs, cognitive health screening, depression screening, fall risk assessment, preventive screenings, health education and counseling, and a personalized prevention plan",
+      width: 1024,
+      height: 1536,
     },
-    image: SENIOR_VISIT,
     grid: {
       title: "What Your Medicare Annual Wellness Visit Covers",
       items: [
@@ -477,21 +409,12 @@ export const landingPages: LandingPageData[] = [
       { title: "Vaccinations", description: "Kept up to date at your visit.", icon: "Syringe" },
       { title: "All ages", description: "Adults and children alike.", icon: "Users" },
     ],
-    aside: {
-      kind: "checklist",
-      title: "Your annual physical may include:",
-      items: [
-        "Review of your medical history",
-        "Blood pressure & vitals check",
-        "Physical examination",
-        "Cholesterol & blood sugar screening",
-        "Cancer screening recommendations",
-        "Vaccination review & updates",
-        "Medication review",
-        "A plan for the year ahead",
-      ],
+    image: {
+      src: "/images/doctor/annual-physical-exam-toledo.jpg",
+      alt: "Dr. Saudia Mushkbar, MD with an older patient beside a panel headed “A Healthy You Builds a Stronger Tomorrow”, listing: check your health, prevent future problems, feel your best, and live a longer, healthier life",
+      width: 1199,
+      height: 1312,
     },
-    image: CONSULT,
     grid: {
       title: "What a Wellness Exam Covers",
       items: [
@@ -542,21 +465,12 @@ export const landingPages: LandingPageData[] = [
       { title: "Chronic disease support", description: "Long-term conditions managed well.", icon: "Activity" },
       { title: "Medicare accepted", description: "Medicare & Medicare Advantage.", icon: "ShieldCheck" },
     ],
-    aside: {
-      kind: "checklist",
-      title: "Senior care includes:",
-      items: [
-        "Medicare Annual Wellness Visits",
-        "Preventive care & screenings",
-        "Chronic disease management",
-        "Medication management",
-        "Memory & cognitive check-ins",
-        "Fall risk assessment",
-        "Coordination with specialists",
-        "Same-day sick visits",
-      ],
+    image: {
+      src: "/images/doctor/senior-primary-care-doctor-toledo.jpg",
+      alt: "Dr. Saudia Mushkbar, MD with an older patient beside a panel headed “Comprehensive Primary Care for Seniors”, covering preventive and wellness care, chronic disease management, memory and cognitive health, healthy aging support, care coordination, and Medicare and insurance support",
+      width: 1319,
+      height: 1193,
     },
-    image: SENIOR_VISIT,
     grid: {
       title: "Comprehensive Care for Older Adults",
       items: [
@@ -607,8 +521,12 @@ export const landingPages: LandingPageData[] = [
       "Compassionate, personalized care you can trust",
       "Convenient location in Toledo, OH",
     ],
-    aside: { kind: "trust" },
-    image: SCRUBS,
+    image: {
+      src: "/images/doctor/switch-medicare-primary-care-doctor-toledo.jpg",
+      alt: "Dr. Saudia Mushkbar, MD beside a panel headed “Switch Your Medicare PCP to Dr. Mushkbar”, explaining why patients choose her and the four steps to switch: call the office, we help with the paperwork, confirm your plan, and you’re all set",
+      width: 1224,
+      height: 1285,
+    },
     steps: {
       title: "It’s Easy to Switch — We Handle the Rest",
       items: [
@@ -750,8 +668,12 @@ export const landingPages: LandingPageData[] = [
       "Same-day & same-week appointments",
       "Convenient location in Toledo, OH",
     ],
-    aside: { kind: "trust" },
-    image: SCRUBS,
+    image: {
+      src: "/images/doctor/new-patients.jpg",
+      alt: "Dr. Saudia Mushkbar, MD in her Toledo office beside a panel headed “New Patients Welcome”, listing care for all ages, preventive care and annual exams, chronic disease management, medication management, most insurance plans accepted, and a partner in your health",
+      width: 1145,
+      height: 1374,
+    },
     grid: {
       title: "Comprehensive Care for Every Member of Your Family",
       items: [
@@ -824,23 +746,12 @@ export const landingPages: LandingPageData[] = [
       { title: "Nutrition & lifestyle", description: "Practical, sustainable changes.", icon: "Apple" },
       { title: "Ongoing follow-up", description: "Regular reviews of your progress.", icon: "CalendarCheck" },
     ],
-    aside: {
-      kind: "checklist",
-      title: "Weight & wellness care includes:",
-      items: [
-        "Medical evaluation & goal setting",
-        "GLP-1 program discussion & supervision",
-        "Nutrition & lifestyle counseling",
-        "Blood sugar & cholesterol screening",
-        "Blood pressure monitoring",
-        "Ongoing follow-up visits",
-      ],
-      note: {
-        title: "Is a GLP-1 right for you?",
-        body: "Suitability depends on your medical history. Call the office to discuss your options with Dr. Mushkbar.",
-      },
+    image: {
+      src: "/images/doctor/weight-loss-doctor-toledo.jpg",
+      alt: "Dr. Saudia Mushkbar, MD measuring a patient’s waist beside a panel headed “Medically Supervised Weight Loss”, covering personalized weight loss plans, nutrition and lifestyle counseling, GLP-1 medication guidance, and ongoing support",
+      width: 1224,
+      height: 1285,
     },
-    image: CONSULT,
     grid: {
       title: "Comprehensive Weight & Wellness Care",
       items: [
