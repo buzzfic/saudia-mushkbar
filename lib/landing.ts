@@ -24,6 +24,15 @@ const SCRUBS = {
   height: 1320,
 } as const;
 
+const BLOOD_PRESSURE = {
+  src: "/images/doctor/high-blood-pressure-doctor-toledo.jpg",
+  // The panel is part of the image file, so its wording has to live here —
+  // none of it is otherwise available to screen readers or crawlers.
+  alt: "Dr. Saudia Mushkbar, MD in her Toledo, Ohio family medicine office, beside a panel headed “We Help You” reading: monitor and manage blood pressure, lower your risk of heart attack and stroke, create a personalized treatment plan, improve your lifestyle and overall health, and feel your best every day",
+  width: 1024,
+  height: 1536,
+} as const;
+
 const SENIOR_VISIT = {
   src: "/images/general/family-medicine-care-2.png",
   alt: "A clinician sitting with an older adult patient during a primary care visit",
@@ -338,20 +347,9 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifestyle support", description: "Diet, activity and stress.", icon: "Footprints" },
       { title: "Whole-person care", description: "Heart, kidney and cholesterol health.", icon: "HeartPulse" },
     ],
-    aside: {
-      kind: "checklist",
-      title: "Blood pressure care includes:",
-      items: [
-        "Blood pressure monitoring",
-        "Hypertension diagnosis & follow-up",
-        "Medication management",
-        "Cholesterol management",
-        "Diabetes and kidney health screening",
-        "Diet, activity & stress guidance",
-        "Coordination with specialists when needed",
-      ],
-    },
-    image: SCRUBS,
+    // No floating card: the portrait carries its own "We Help You" panel, so a
+    // second card on top would stack one over the other.
+    image: BLOOD_PRESSURE,
     grid: {
       title: "Comprehensive Hypertension Care",
       items: [
