@@ -19,6 +19,8 @@ const buttonVariants = cva(
           "bg-brand text-white hover:bg-brand-700 active:bg-brand-800",
         alert:
           "bg-alert text-white hover:bg-[#c8181c] active:bg-[#ab1417]",
+        berry:
+          "bg-berry text-white hover:bg-[#a51555] active:bg-[#8c1147]",
         outline:
           "border border-brand/30 bg-transparent text-brand hover:border-brand hover:bg-brand hover:text-white",
         "outline-light":

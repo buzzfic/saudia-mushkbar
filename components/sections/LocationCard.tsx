@@ -12,9 +12,12 @@ import { CONTACT, CTA, MAPS, OFFICE_HOURS, PRACTICE } from "@/lib/constants";
 export function LocationCard({
   ctaTitle = "Ready to Schedule?",
   ctaDescription = "We make it easy to get the care you need.",
+  accent = "alert",
 }: {
   ctaTitle?: string;
   ctaDescription?: string;
+  /** Matches the page's hero accent so the two call buttons agree. */
+  accent?: "alert" | "berry";
 }) {
   return (
     <section className="py-16 lg:py-20">
@@ -73,10 +76,10 @@ export function LocationCard({
           </div>
 
           <Image
-            src="/images/general/toledo-clinic-office-exterior.webp"
-            alt="The Toledo Clinic office entrance on N. Holland-Sylvania Road, with an Accepting New Patients sign above the doors"
-            width={1535}
-            height={1024}
+            src="/images/clinic-image.jpeg"
+            alt="The medical office building on N. Holland-Sylvania Road in Toledo where Dr. Mushkbar sees patients, with parking directly outside the entrance"
+            width={1805}
+            height={871}
             sizes="(max-width: 1024px) 100vw, 30vw"
             className="h-full min-h-56 w-full rounded-card object-cover shadow-card"
           />
@@ -88,7 +91,7 @@ export function LocationCard({
             <p className="mt-3 text-white/85">{ctaDescription}</p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-              <Button asChild variant="alert" size="md">
+              <Button asChild variant={accent} size="md">
                 <a href={CTA.callHref}>
                   <Phone className="size-4" aria-hidden="true" />
                   {CTA.callLabel}

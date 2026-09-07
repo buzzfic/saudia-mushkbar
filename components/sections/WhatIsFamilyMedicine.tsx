@@ -20,7 +20,7 @@ export function WhatIsFamilyMedicine() {
             {copy.whatIsFamilyMedicine}
           </p>
           <Link
-            href="/primary-care-doctor-toledo"
+            href="/services"
             className="mt-9 inline-flex items-center gap-2 font-medium text-accent underline decoration-accent/60 decoration-2 underline-offset-[6px] transition-colors hover:text-white"
           >
             Find Out More

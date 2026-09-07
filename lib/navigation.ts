@@ -20,11 +20,6 @@ export type NavItem = NavLink & {
 
 export const servicePages: NavLink[] = [
   {
-    label: "Primary Care in Toledo",
-    href: "/primary-care-doctor-toledo",
-    description: "Comprehensive care for children, adults and seniors.",
-  },
-  {
     label: "Same-Day Primary Care",
     href: "/same-day-primary-care-toledo",
     description: "Get seen today for urgent, non-emergency concerns.",
@@ -58,11 +53,6 @@ export const servicePages: NavLink[] = [
     label: "Weight Loss & GLP-1",
     href: "/weight-loss-doctor-toledo",
     description: "GLP-1 programs and personalized wellness plans.",
-  },
-  {
-    label: "Hospital Follow-Up Care",
-    href: "/hospital-follow-up-primary-care-toledo",
-    description: "Transition care after a hospital stay or ER visit.",
   },
 ];
 
@@ -131,13 +121,11 @@ export const allRoutes: { path: string; priority: number; changeFrequency: "week
   { path: "/medicare-annual-wellness-visit-toledo", priority: 0.8, changeFrequency: "monthly" },
   { path: "/switch-medicare-primary-care-doctor-toledo", priority: 0.8, changeFrequency: "monthly" },
   { path: "/same-day-primary-care-toledo", priority: 0.9, changeFrequency: "monthly" },
-  { path: "/primary-care-doctor-toledo", priority: 0.9, changeFrequency: "monthly" },
   { path: "/womens-primary-care-doctor-toledo", priority: 0.8, changeFrequency: "monthly" },
   { path: "/senior-primary-care-doctor-toledo", priority: 0.8, changeFrequency: "monthly" },
   { path: "/diabetes-doctor-toledo", priority: 0.8, changeFrequency: "monthly" },
   { path: "/high-blood-pressure-doctor-toledo", priority: 0.8, changeFrequency: "monthly" },
   { path: "/annual-physical-exam-toledo", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/hospital-follow-up-primary-care-toledo", priority: 0.7, changeFrequency: "monthly" },
   { path: "/weight-loss-doctor-toledo", priority: 0.8, changeFrequency: "monthly" },
 ];
 

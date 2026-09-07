@@ -60,6 +60,12 @@ const config: Config = {
          * calling the office. Nothing else uses it.
          */
         alert: "#EA292D",
+        /**
+         * #C41C67 — an alternative accent a page can opt into in place of the
+         * red, for sections whose artwork is pink rather than red. Reads at
+         * 5.5:1 on the page background and 5.7:1 behind white button text.
+         */
+        berry: "#C41C67",
         cream: "#FCF7ED",
         ink: "#272626",
         body: "#625A53",

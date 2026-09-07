@@ -28,6 +28,7 @@ export function LandingHero({
   // landscape one squeezed into a 45%-wide column renders that text far too
   // small, so wide images get the full content width beneath the copy instead.
   const isWide = data.image.width >= data.image.height;
+  const accent = data.accent ?? "alert";
 
   return (
     <section className="bg-gradient-to-b from-cream to-canvas pb-16 pt-10 lg:pb-20 lg:pt-14">
@@ -52,7 +53,9 @@ export function LandingHero({
 
             <h1 className={cn("text-display-hero", data.badge ? "mt-6" : "mt-0")}>
               <span className="block">{data.headingLead}</span>{" "}
-              <span className="block text-alert">{data.headingAccent}</span>
+              <span className={cn("block", accent === "berry" ? "text-berry" : "text-alert")}>
+                {data.headingAccent}
+              </span>
             </h1>
 
             <p className="mt-5 font-display text-display-4 text-brand-500">
@@ -102,7 +105,7 @@ export function LandingHero({
             ) : null}
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <Button asChild variant="alert" size="lg">
+              <Button asChild variant={accent} size="lg">
                 <a href={CTA.callHref}>
                   <Phone className="size-4" aria-hidden="true" />
                   {CTA.callLabel}

@@ -2,6 +2,7 @@ import { JsonLd } from "@/components/common/JsonLd";
 import { LandingHero } from "@/components/landing/LandingHero";
 import { LandingFeatureGrid } from "@/components/landing/LandingFeatureGrid";
 import { LandingSteps } from "@/components/landing/LandingSteps";
+import { LandingEligibility } from "@/components/landing/LandingEligibility";
 import { WhyChooseAndReviews } from "@/components/landing/WhyChooseAndReviews";
 import { LandingClosing } from "@/components/landing/LandingClosing";
 import { LocationCard } from "@/components/sections/LocationCard";
@@ -43,6 +44,14 @@ export function LandingPage({ data }: { data: LandingPageData }) {
         <LandingSteps title={data.steps.title} items={data.steps.items} />
       ) : null}
 
+      {data.eligibility ? (
+        <LandingEligibility
+          title={data.eligibility.title}
+          intro={data.eligibility.intro}
+          items={data.eligibility.items}
+        />
+      ) : null}
+
       <WhyChooseAndReviews
         title={data.whyChoose.title}
         items={data.whyChoose.items}
@@ -51,6 +60,7 @@ export function LandingPage({ data }: { data: LandingPageData }) {
       <LocationCard
         ctaTitle={data.cta.title}
         ctaDescription={data.cta.description}
+        accent={data.accent ?? "alert"}
       />
 
       <LandingClosing

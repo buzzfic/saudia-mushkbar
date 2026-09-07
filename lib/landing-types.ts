@@ -40,6 +40,11 @@ export type LandingPageData = {
   metaDescription: string;
   /** Name used in MedicalProcedure structured data. */
   serviceName: string;
+  /**
+   * Accent for the split headline and the call button. Defaults to the site's
+   * red; "berry" suits pages whose artwork is pink rather than red.
+   */
+  accent?: "berry";
   badge?: { label: string; icon: string };
   /** First headline line, set in the brand colour. */
   headingLead: string;
@@ -62,6 +67,8 @@ export type LandingPageData = {
   /** Or a numbered process, used on the "Switch PCP" layout. */
   steps?: { title: string; items: LandingStep[] };
 
+  /** Optional "is this right for you?" block, e.g. programme criteria. */
+  eligibility?: { title: string; intro: string; items: string[] };
   whyChoose: { title: string; items: LandingReason[] };
   cta: { title: string; description: string };
   closing: { lead: string; script: string };
@@ -76,6 +83,7 @@ export type LandingPageData = {
  */
 export type LandingHeroData = Pick<
   LandingPageData,
+  | "accent"
   | "badge"
   | "headingLead"
   | "headingAccent"

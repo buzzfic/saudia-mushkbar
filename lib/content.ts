@@ -71,7 +71,7 @@ export const services: ServiceCard[] = [
     title: "Pediatric & Adult Care",
     description: "Quality care for children, adults, and seniors alike.",
     icon: "Users",
-    href: "/primary-care-doctor-toledo",
+    href: "/services",
   },
   {
     title: "Weight Loss & Wellness",

@@ -82,7 +82,7 @@ export default function AboutPage() {
                 {copy.whatIsFamilyMedicine}
               </p>
               <Link
-                href="/primary-care-doctor-toledo"
+                href="/services"
                 className="mt-7 inline-flex items-center gap-2 font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-500"
               >
                 Primary care in Toledo

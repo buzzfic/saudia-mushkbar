@@ -10,13 +10,6 @@ import type { LandingPageData } from "@/lib/landing-types";
  * say what a visit covers — no outcomes, guarantees or statistics.
  */
 
-const WHITE_COAT = {
-  src: "/images/doctor/doctor-saudia-mushkbar-white-coat.jpg",
-  alt: "Dr. Saudia Mushkbar, MD, family medicine physician in Toledo, Ohio, in a Toledo Clinic white coat",
-  width: 1706,
-  height: 2560,
-} as const;
-
 /** Reasons shared by most pages, phrased from facts published on the site. */
 const commonReasons = [
   {
@@ -95,64 +88,12 @@ export const landingPages: LandingPageData[] = [
       script: "We look forward to caring for you.",
     },
     related: [
-      "/primary-care-doctor-toledo",
       "/annual-physical-exam-toledo",
       "/new-patients",
     ],
   },
 
   // ------------------------------------------------------------- primary care
-  {
-    path: "/primary-care-doctor-toledo",
-    label: "Primary Care in Toledo",
-    metaTitle: "Primary Care Doctor in Toledo, Ohio",
-    metaDescription:
-      "Dr. Saudia Mushkbar, MD is a board-certified family medicine physician providing primary care for children, adults and seniors in Toledo and Northwest Ohio.",
-    serviceName: "Primary care",
-    badge: { label: "Primary Care", icon: "Stethoscope" },
-    headingLead: "Your Primary Care",
-    headingAccent: "Doctor in Toledo",
-    tagline: "One physician for your whole family.",
-    intro:
-      "Family Medicine focuses on comprehensive healthcare for patients of all ages. As a family doctor in Toledo, Ohio, Dr. Saudia Mushkbar cares for children, adults, and seniors managing both everyday health concerns and long-term conditions, with an emphasis on preventive care, routine checkups and personalized treatment.",
-    points: [
-      { title: "All ages welcome", description: "Children, adults and seniors.", icon: "Users" },
-      { title: "Preventive focus", description: "Screenings and yearly checkups.", icon: "ShieldCheck" },
-      { title: "Long-term partnership", description: "Continuity across every stage of life.", icon: "HeartHandshake" },
-      { title: "Same-week access", description: "Appointments when you need them.", icon: "CalendarClock" },
-    ],
-    aside: { kind: "trust" },
-    image: WHITE_COAT,
-    grid: {
-      title: "Comprehensive Primary Care Services",
-      items: [
-        { title: "Annual physicals & check-ups", description: "Yearly visits to monitor your health.", icon: "ClipboardCheck" },
-        { title: "Chronic disease management", description: "Diabetes, blood pressure, thyroid and asthma.", icon: "Activity" },
-        { title: "Preventive screenings", description: "Cholesterol, blood sugar and cancer screenings.", icon: "Microscope" },
-        { title: "Women’s health services", description: "Routine exams, family planning and menopause support.", icon: "Flower2" },
-        { title: "Pediatric care", description: "Check-ups, vaccinations and common illnesses.", icon: "Baby" },
-        { title: "Same-day sick visits", description: "Colds, flu, infections, allergies and minor injuries.", icon: "Thermometer" },
-      ],
-    },
-    whyChoose: {
-      title: "Why Patients Choose Dr. Mushkbar",
-      items: commonReasons,
-    },
-    cta: {
-      title: "Ready to Get Started?",
-      description: "Dr. Mushkbar is welcoming new patients of all ages.",
-    },
-    closing: {
-      lead: "Great healthcare starts with trust and connection.",
-      script: "We look forward to caring for you and your family.",
-    },
-    related: [
-      "/same-day-primary-care-toledo",
-      "/annual-physical-exam-toledo",
-      "/senior-primary-care-doctor-toledo",
-    ],
-  },
-
   // ------------------------------------------------------------------ women's
   {
     path: "/womens-primary-care-doctor-toledo",
@@ -207,7 +148,6 @@ export const landingPages: LandingPageData[] = [
     },
     related: [
       "/annual-physical-exam-toledo",
-      "/primary-care-doctor-toledo",
       "/weight-loss-doctor-toledo",
     ],
   },
@@ -439,7 +379,6 @@ export const landingPages: LandingPageData[] = [
       script: "We look forward to seeing you.",
     },
     related: [
-      "/primary-care-doctor-toledo",
       "/medicare-annual-wellness-visit-toledo",
       "/womens-primary-care-doctor-toledo",
     ],
@@ -497,7 +436,6 @@ export const landingPages: LandingPageData[] = [
     related: [
       "/medicare-primary-care-doctor-toledo",
       "/medicare-annual-wellness-visit-toledo",
-      "/hospital-follow-up-primary-care-toledo",
     ],
   },
 
@@ -579,75 +517,6 @@ export const landingPages: LandingPageData[] = [
   },
 
   // ------------------------------------------------------- hospital follow-up
-  {
-    path: "/hospital-follow-up-primary-care-toledo",
-    label: "Hospital Follow-Up Care",
-    metaTitle: "Hospital Follow-Up Primary Care in Toledo, OH",
-    metaDescription:
-      "Recently discharged from the hospital or ER? Dr. Saudia Mushkbar, MD offers prompt follow-up appointments in Toledo to review medications and next steps.",
-    serviceName: "Hospital discharge follow-up visit",
-    badge: { label: "Follow-Up Care", icon: "Hospital" },
-    headingLead: "Hospital",
-    headingAccent: "Follow-Up Care",
-    tagline: "The visit that keeps your recovery on track.",
-    intro:
-      "The days after a hospital stay or emergency room visit are when things most often get missed. Dr. Saudia Mushkbar, MD offers prompt follow-up appointments to review what happened, go through any medication changes and make sure the next steps are clear.",
-    points: [
-      { title: "Prompt appointments", description: "Same-day and same-week access.", icon: "CalendarClock" },
-      { title: "Medication review", description: "Reconciling what changed.", icon: "Pill" },
-      { title: "Clear next steps", description: "Tests, referrals and recovery.", icon: "ClipboardCheck" },
-      { title: "Specialist coordination", description: "Keeping your care joined up.", icon: "BriefcaseMedical" },
-    ],
-    aside: {
-      kind: "checklist",
-      title: "A follow-up visit covers:",
-      items: [
-        "Review of your hospital or ER discharge summary",
-        "Medication reconciliation",
-        "Follow-up on tests and results",
-        "Wound or symptom checks",
-        "Referrals and specialist coordination",
-        "A recovery plan you understand",
-      ],
-      note: {
-        title: "Call soon after discharge",
-        body: "Call 419-517-7687 as soon as you are home and we will find the earliest suitable appointment.",
-      },
-    },
-    image: WHITE_COAT,
-    grid: {
-      title: "Comprehensive Transition Care",
-      items: [
-        { title: "Discharge review", description: "Going through what happened and why.", icon: "ClipboardCheck" },
-        { title: "Medication management", description: "Reconciling new and existing prescriptions.", icon: "Pill" },
-        { title: "Test follow-up", description: "Chasing pending results and repeat testing.", icon: "Microscope" },
-        { title: "Chronic disease review", description: "Getting long-term conditions stable again.", icon: "Activity" },
-        { title: "Specialist coordination", description: "Making sure referrals happen.", icon: "BriefcaseMedical" },
-        { title: "Ongoing support", description: "Regular check-ins through recovery.", icon: "HeartHandshake" },
-      ],
-    },
-    whyChoose: {
-      title: "Why Patients Choose Dr. Mushkbar",
-      items: [
-        { label: "Hospital medicine experience", text: "including work in hospital medicine with the Toledo Clinic." },
-        ...commonReasons.slice(0, 4),
-      ],
-    },
-    cta: {
-      title: "Just Left the Hospital?",
-      description: "Call us and we’ll get you seen promptly.",
-    },
-    closing: {
-      lead: "Recovery goes better when someone is keeping track of the whole picture.",
-      script: "We’re here to help you get back to yourself.",
-    },
-    related: [
-      "/senior-primary-care-doctor-toledo",
-      "/primary-care-doctor-toledo",
-      "/medicare-primary-care-doctor-toledo",
-    ],
-  },
-
   // ------------------------------------------------------------- new patients
   {
     path: "/new-patients",
@@ -720,7 +589,6 @@ export const landingPages: LandingPageData[] = [
       script: "Your health. Our priority.",
     },
     related: [
-      "/primary-care-doctor-toledo",
       "/same-day-primary-care-toledo",
       "/medicare-primary-care-doctor-toledo",
     ],
@@ -730,21 +598,24 @@ export const landingPages: LandingPageData[] = [
   {
     path: "/weight-loss-doctor-toledo",
     label: "Weight Loss & GLP-1",
-    metaTitle: "Weight Loss & GLP-1 Programs in Toledo, OH",
+    metaTitle: "Medical Weight Loss & GLP-1 Programs in Toledo, OH",
     metaDescription:
-      "Dr. Saudia Mushkbar, MD offers GLP-1 programs and personalized weight loss and wellness plans in Toledo, Ohio, as part of your primary care.",
+      "Medically supervised weight loss with Dr. Saudia Mushkbar, MD in Toledo — GLP-1 medications, personalized plans, nutrition guidance and ongoing support.",
     serviceName: "Medical weight management",
+    // The artwork on this page is pink, so the red accent would clash.
+    accent: "berry",
     badge: { label: "Weight Loss & Wellness", icon: "Scale" },
-    headingLead: "Weight Loss",
-    headingAccent: "& Wellness",
-    tagline: "GLP-1 programs and personalized plans.",
+    headingLead: "Sustainable Weight Loss.",
+    headingAccent: "Lasting Results.",
+    tagline: "Personalized Care. Proven Solutions.",
     intro:
-      "GLP-1 programs and personalized plans to help you feel your best. Weight is managed here as part of your primary care, alongside your blood pressure, blood sugar and the rest of your health — not in isolation.",
-    points: [
-      { title: "GLP-1 programs", description: "Medically supervised.", icon: "Pill" },
-      { title: "Personalized plans", description: "Built around your goals.", icon: "ClipboardCheck" },
-      { title: "Nutrition & lifestyle", description: "Practical, sustainable changes.", icon: "Apple" },
-      { title: "Ongoing follow-up", description: "Regular reviews of your progress.", icon: "CalendarCheck" },
+      "Achieve your weight loss goals with medically supervised care tailored to your body, your health, and your life. Dr. Saudia Mushkbar, MD offers safe, effective weight loss programs including GLP-1 medications to help you feel better, look better, and live healthier.",
+    checklist: [
+      "GLP-1 Medications (Semaglutide & More)",
+      "Customized Weight Loss Plans",
+      "Nutrition & Lifestyle Guidance",
+      "Ongoing Support & Accountability",
+      "Safe, Physician-Supervised Care",
     ],
     image: {
       src: "/images/doctor/weight-loss-doctor-toledo.jpg",
@@ -753,14 +624,55 @@ export const landingPages: LandingPageData[] = [
       height: 1285,
     },
     grid: {
-      title: "Comprehensive Weight & Wellness Care",
+      title: "Comprehensive Weight Loss Care",
       items: [
-        { title: "Medical evaluation", description: "Understanding the whole health picture first.", icon: "Stethoscope" },
-        { title: "GLP-1 programs", description: "Medically supervised treatment where appropriate.", icon: "Pill" },
-        { title: "Nutrition counseling", description: "Practical guidance you can keep up with.", icon: "Apple" },
-        { title: "Activity & lifestyle", description: "Movement, sleep and stress management.", icon: "Footprints" },
-        { title: "Metabolic screening", description: "Blood sugar, cholesterol and blood pressure.", icon: "Microscope" },
-        { title: "Ongoing support", description: "Regular check-ins to keep momentum.", icon: "HeartHandshake" },
+        {
+          title: "GLP-1 Therapy",
+          description:
+            "FDA-approved medications like Semaglutide (Ozempic®, Wegovy®) to help reduce appetite and support weight loss.",
+          icon: "Pill",
+        },
+        {
+          title: "Personalized Plans",
+          description:
+            "Every plan is customized based on your health history, goals, and lifestyle.",
+          icon: "ClipboardCheck",
+        },
+        {
+          title: "Nutrition Guidance",
+          description:
+            "Practical, realistic advice to help you make healthier choices every day.",
+          icon: "Apple",
+        },
+        {
+          title: "Lifestyle Support",
+          description:
+            "We help you build sustainable habits with exercise, sleep, and stress management.",
+          icon: "Footprints",
+        },
+        {
+          title: "Track & Monitor",
+          description:
+            "Regular follow-ups to track progress and adjust your plan for maximum results.",
+          icon: "Gauge",
+        },
+        {
+          title: "Ongoing Support",
+          description:
+            "You’re never alone. We’re here to support and celebrate your success.",
+          icon: "HeartHandshake",
+        },
+      ],
+    },
+    eligibility: {
+      title: "Is Weight Loss Right for You?",
+      intro:
+        "You may benefit from a medically supervised weight loss program if you:",
+      items: [
+        "Have a BMI of 27+ with weight-related health conditions",
+        "Have a BMI of 30+",
+        "Have struggled to lose weight with diet and exercise alone",
+        "Want to improve your overall health and quality of life",
       ],
     },
     whyChoose: {
@@ -768,17 +680,18 @@ export const landingPages: LandingPageData[] = [
       items: commonReasons,
     },
     cta: {
-      title: "Talk Through Your Options",
-      description: "Book a visit to discuss weight loss and wellness with Dr. Mushkbar.",
+      title: "Ready to Start Your Journey?",
+      description:
+        "Take the first step toward a healthier, happier you — schedule your consultation today.",
     },
     closing: {
-      lead: "Personalized plans, medical supervision and support that lasts.",
-      script: "Let’s help you feel your best.",
+      lead: "Your health. Your goals. Our commitment.",
+      script: "Compassionate care that helps you feel your best.",
     },
     related: [
       "/diabetes-doctor-toledo",
       "/high-blood-pressure-doctor-toledo",
-      "/primary-care-doctor-toledo",
+      "/annual-physical-exam-toledo",
     ],
   },
 ];
