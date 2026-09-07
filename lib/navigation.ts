@@ -2,8 +2,9 @@
  * Site navigation.
  *
  * The original WordPress menu was About / Services / Primary Medicare /
- * Contact. Those four labels are preserved; "Services" and "Primary Medicare"
- * have grown into grouped menus now that the individual service pages exist.
+ * Contact. The structure is preserved; "Primary Medicare" is now labelled
+ * "Medicare", and it and "Services" have grown into grouped menus now that the
+ * individual service pages exist.
  */
 
 export type NavLink = {
@@ -102,7 +103,7 @@ export const primaryNav: NavItem[] = [
     ],
   },
   {
-    label: "Primary Medicare",
+    label: "Medicare",
     href: "/medicare-primary-care-doctor-toledo",
     description: "Medicare and Medicare Advantage patients welcome.",
     children: medicarePages,
@@ -144,7 +145,7 @@ export const allRoutes: { path: string; priority: number; changeFrequency: "week
 export const footerNav: NavLink[] = [
   { label: "About Us", href: "/about" },
   { label: "Our Services", href: "/services" },
-  { label: "Primary Medicare", href: "/medicare-primary-care-doctor-toledo" },
+  { label: "Medicare", href: "/medicare-primary-care-doctor-toledo" },
   { label: "New Patients", href: "/new-patients" },
   { label: "Contacts", href: "/contact" },
 ];

@@ -134,10 +134,10 @@ export const primaryCareServices = [
 
 /** "Simple Booking Process" */
 export const bookingSteps = [
-  { step: "1", title: "Book a Discovery Call" },
-  { step: "2", title: "Arrange an Appointment" },
-  { step: "3", title: "We Discuss Your Treatment Plan" },
-  { step: "4", title: "Further Consultations and Care Plan" },
+  { step: "1", title: "Schedule Your Appointment" },
+  { step: "2", title: "Confirm Your Insurance" },
+  { step: "3", title: "Meet With Dr. Mushkbar" },
+  { step: "4", title: "Receive Your Personalized Care Plan" },
 ];
 
 export const bookingIntro =

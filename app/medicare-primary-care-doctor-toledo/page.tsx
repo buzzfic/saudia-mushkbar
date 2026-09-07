@@ -39,7 +39,7 @@ export const metadata: Metadata = pageMetadata({
 const crumbs = [
   { name: "Home", path: "/" },
   { name: "Services", path: "/services" },
-  { name: "Primary Medicare", path },
+  { name: "Medicare", path },
 ];
 
 const heroPoints = [

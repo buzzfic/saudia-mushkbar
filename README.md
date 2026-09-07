@@ -123,5 +123,3 @@ Never commit `.env.local`.
 2. Add real social profile URLs to the footer, or leave them out.
 3. Submit `https://www.saudiamushkbar.com/sitemap.xml` in Search Console and
    watch the coverage report for the two preserved URLs.
-4. Remove `public/images/pages/` — those are design reference mockups and would
-   otherwise be served publicly.
