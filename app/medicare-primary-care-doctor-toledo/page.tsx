@@ -52,12 +52,13 @@ const hero: LandingHeroData = {
     "20+ Years of Experience",
   ],
   image: {
-    src: "/images/doctor/primary-care.jpg",
-    // The panel is part of the image file, so its wording has to live in the
-    // alt text — otherwise screen readers and crawlers get none of it.
-    alt: "Dr. Saudia Mushkbar, MD in her Toledo, Ohio family medicine office, beside a panel headed “We Help You” listing: monitor and manage blood pressure, lower your risk of heart attack and stroke, create a personalized treatment plan, improve your lifestyle and overall health, and feel your best every day",
-    width: 1024,
-    height: 1536,
+    src: "/images/doctor/doctor-primary-care.jpg",
+    // The trust panel is part of the image file, so its wording has to live in
+    // the alt text — none of it is otherwise available to screen readers or
+    // crawlers. This is also why the hero omits its own floating card.
+    alt: "Dr. Saudia Mushkbar, MD in her Toledo, Ohio family medicine office, beside a panel reading: 5.0 Google rating from 244+ reviews, 20+ years of clinical experience, board-certified in Family Medicine, and trusted care for Toledo families",
+    width: 1145,
+    height: 1374,
   },
 };
 
