@@ -20,17 +20,17 @@ export type NavItem = NavLink & {
 
 export const servicePages: NavLink[] = [
   {
-    label: "Primary Care in Toledo",
+    label: "Primary Care Doctor",
     href: "/primary-care-doctor-toledo",
     description: "Comprehensive care for children, adults and seniors.",
   },
   {
-    label: "Same-Day Primary Care",
+    label: "Same-Day Care",
     href: "/same-day-primary-care-toledo",
     description: "Get seen today for urgent, non-emergency concerns.",
   },
   {
-    label: "Annual Physical & Wellness Exam",
+    label: "Annual Physical",
     href: "/annual-physical-exam-toledo",
     description: "Yearly checkups, screenings and vaccinations.",
   },
@@ -45,19 +45,19 @@ export const servicePages: NavLink[] = [
     description: "Healthy aging, medication and chronic disease support.",
   },
   {
-    label: "Diabetes Care",
+    label: "Hospital Follow-Up",
+    href: "/hospital-follow-up-primary-care-toledo",
+    description: "Transition care after a hospital stay or ER visit.",
+  },
+  {
+    label: "Diabetes",
     href: "/diabetes-doctor-toledo",
     description: "Blood sugar management and complication prevention.",
   },
   {
-    label: "High Blood Pressure Care",
+    label: "High Blood Pressure",
     href: "/high-blood-pressure-doctor-toledo",
     description: "Monitoring and management of hypertension.",
-  },
-  {
-    label: "Hospital Follow-Up Care",
-    href: "/hospital-follow-up-primary-care-toledo",
-    description: "Transition care after a hospital stay or ER visit.",
   },
   {
     label: "Weight Loss & GLP-1",
@@ -143,6 +143,7 @@ export const allRoutes: { path: string; priority: number; changeFrequency: "week
 
 /** Footer "Pages" column — mirrors the original WordPress footer menu. */
 export const footerNav: NavLink[] = [
+  { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Our Services", href: "/services" },
   { label: "Medicare", href: "/medicare-primary-care-doctor-toledo" },

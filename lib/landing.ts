@@ -121,8 +121,8 @@ export const landingPages: LandingPageData[] = [
     image: {
       src: "/images/doctor/womens-primary-care-doctor-toledo.jpg",
       alt: "Dr. Saudia Mushkbar, MD with a patient beside a panel headed “Women’s Health Care At Every Stage of Life”, listing annual wellness exams, pap smears and breast exams, menstrual and hormonal health, contraception counseling, preconception and pregnancy planning, menopause support, bone health screening, management of chronic conditions, and personalized care for all women",
-      width: 1080,
-      height: 977,
+      width: 1319,
+      height: 1193,
     },
     grid: {
       title: "Comprehensive Women’s Health Services",
@@ -288,7 +288,7 @@ export const landingPages: LandingPageData[] = [
     intro:
       "Your Medicare Annual Wellness Visit is an opportunity to step back and look at your health as a whole, then build a plan for the year ahead. Dr. Saudia Mushkbar, MD provides personalized, preventive care to help you stay healthy, independent and in control.",
     points: [
-      { title: "Covered by Medicare", description: "Part of your Medicare benefits.", icon: "ShieldCheck" },
+      { title: "Medicare preventive benefit", description: "For eligible beneficiaries.", icon: "ShieldCheck" },
       { title: "Personalized prevention", description: "Care tailored to your needs.", icon: "ClipboardCheck" },
       { title: "Early detection", description: "Identify risks and catch problems early.", icon: "Microscope" },
       { title: "A plan for the year", description: "Clear next steps you can follow.", icon: "CalendarCheck" },
@@ -300,7 +300,7 @@ export const landingPages: LandingPageData[] = [
       height: 1536,
     },
     grid: {
-      title: "What Your Medicare Annual Wellness Visit Covers",
+      title: "What Your Medicare Annual Wellness Visit May Include",
       items: [
         { title: "Health risk assessment", description: "We review your health history, lifestyle and risks.", icon: "ClipboardCheck" },
         { title: "Personalized care plan", description: "A plan tailored to your health goals.", icon: "Heart" },
@@ -339,15 +339,15 @@ export const landingPages: LandingPageData[] = [
   // ----------------------------------------------------------- annual physical
   {
     path: "/annual-physical-exam-toledo",
-    label: "Annual Physical & Wellness Exam",
-    metaTitle: "Annual Physical & Wellness Exam in Toledo, OH",
+    label: "Annual Physical Exam",
+    metaTitle: "Annual Physical Exam in Toledo, OH",
     metaDescription:
       "Book your annual physical with Dr. Saudia Mushkbar, MD in Toledo — a comprehensive yearly checkup for adults and children with screenings and vaccinations.",
     serviceName: "Annual physical examination",
     accent: "forest",
     badge: { label: "Annual Physical", icon: "ClipboardCheck" },
-    headingLead: "Annual Physical &",
-    headingAccent: "Wellness Exam",
+    headingLead: "Annual Physical",
+    headingAccent: "Exam in Toledo, OH",
     tagline: "One visit a year that looks after the whole picture.",
     intro:
       "Comprehensive yearly checkups for adults and children to monitor health and update vaccinations. Your annual physical is the visit where routine screenings get done, questions get answered and small problems get caught early.",
@@ -364,7 +364,7 @@ export const landingPages: LandingPageData[] = [
       height: 1312,
     },
     grid: {
-      title: "What a Wellness Exam Covers",
+      title: "What Your Annual Physical May Include",
       items: [
         { title: "Physical examination", description: "A thorough head-to-toe check.", icon: "Stethoscope" },
         { title: "Preventive screenings", description: "Cholesterol, blood sugar and cancer screenings.", icon: "Microscope" },
@@ -417,8 +417,8 @@ export const landingPages: LandingPageData[] = [
     image: {
       src: "/images/doctor/senior-primary-care-doctor-toledo.jpg",
       alt: "Dr. Saudia Mushkbar, MD with an older patient beside a panel headed “Comprehensive Primary Care for Seniors”, covering preventive and wellness care, chronic disease management, memory and cognitive health, healthy aging support, care coordination, and Medicare and insurance support",
-      width: 1319,
-      height: 1193,
+      width: 1224,
+      height: 1285,
     },
     grid: {
       title: "Comprehensive Care for Older Adults",

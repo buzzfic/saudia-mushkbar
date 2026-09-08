@@ -12,7 +12,7 @@ import {
   PRACTICE,
   REVIEWS,
 } from "@/lib/constants";
-import { footerNav, servicePages } from "@/lib/navigation";
+import { footerNav, medicarePages, servicePages } from "@/lib/navigation";
 
 /**
  * Site footer. Carries the id="contact" anchor the WordPress site used, so any
@@ -24,7 +24,7 @@ export function Footer() {
   return (
     <footer id="contact" className="mt-24 bg-brand text-white/80">
       <Container className="py-16 lg:py-20">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr]">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.25fr_0.8fr_1.15fr_1fr_1fr] lg:gap-8">
           <div>
             <Logo tone="light" />
 
@@ -102,7 +102,28 @@ export function Footer() {
               Care We Provide
             </h2>
             <ul className="mt-5 flex flex-col gap-3">
-              {servicePages.slice(0, 6).map((item) => (
+              {servicePages.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-[0.9375rem] transition-colors hover:text-white"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <nav aria-labelledby="footer-medicare">
+            <h2
+              id="footer-medicare"
+              className="font-mono text-eyebrow uppercase tracking-[0.14em] text-accent"
+            >
+              Medicare
+            </h2>
+            <ul className="mt-5 flex flex-col gap-3">
+              {medicarePages.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}

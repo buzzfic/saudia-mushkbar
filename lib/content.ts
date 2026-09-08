@@ -156,7 +156,7 @@ export const bookingSteps = [
 ];
 
 export const bookingIntro =
-  "If you are concerned about any health condition you have or are worried you may have, we can discuss a functional approach to managing it.";
+  "If you are concerned about any health condition you have or are worried you may have, we can evaluate your concerns and develop a personalized approach to your care.";
 
 export type Testimonial = {
   quote: string;
