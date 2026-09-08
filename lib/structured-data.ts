@@ -1,10 +1,4 @@
-import {
-  CONTACT,
-  MAPS,
-  OPENING_HOURS_SPECIFICATION,
-  PRACTICE,
-  REVIEWS,
-} from "@/lib/constants";
+import { CONTACT, MAPS, PRACTICE, REVIEWS } from "@/lib/constants";
 import { siteUrl } from "@/lib/seo";
 
 /**
@@ -58,12 +52,6 @@ export function practiceGraph() {
           name: PRACTICE.affiliation,
           url: PRACTICE.affiliationUrl,
         },
-        openingHoursSpecification: OPENING_HOURS_SPECIFICATION.map((slot) => ({
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: slot.dayOfWeek,
-          opens: slot.opens,
-          closes: slot.closes,
-        })),
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: REVIEWS.google.ratingValue,

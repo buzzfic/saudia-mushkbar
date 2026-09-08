@@ -134,10 +134,10 @@ site had a placeholder, it was dropped rather than invented:
 - **Contact form** — the old site had none; appointments were booked by phone,
   and that is preserved. Every call to action dials the office directly, and
   `/contact` carries the number, address, hours, map and directions.
-- **Office hours** — not published anywhere on the live site. The values in
-  `lib/constants.ts` (`Mon–Fri 8:00 AM – 5:00 PM`, weekends closed) came from the
-  client-supplied layout mockups and are flagged `PENDING CLIENT CONFIRMATION`.
-  Set `OFFICE_HOURS` to `null` to hide them site-wide.
+- **Office hours** — not published anywhere on the live site. Values from the
+  client-supplied mockups were carried temporarily under a
+  `PENDING CLIENT CONFIRMATION` flag, then removed at the client's request.
+  `OFFICE_HOURS` is `null` and the practice schema makes no opening-hours claim.
 - **Review counts** — the live site says *5.0 / 200+ Google reviews* and
   *4.8 / 60+ Healthgrades*. The mockups say "244+". The site's own published
   numbers are used.

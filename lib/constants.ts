@@ -40,26 +40,15 @@ export const CONTACT = {
 export const ADDRESS_ONE_LINE = `${CONTACT.address.street}, ${CONTACT.address.unit}, ${CONTACT.address.city}, ${CONTACT.address.state} ${CONTACT.address.postalCode}`;
 
 /**
- * PENDING CLIENT CONFIRMATION — office hours are not published on the live
- * WordPress site. These values come from the client-supplied layout mockups.
- * Set to `null` to hide hours across the site.
+ * Office hours are not published on the site. The site never invented them and
+ * they have now been removed at the client's request, so every hours block is
+ * hidden and the practice's structured data makes no opening-hours claim.
+ *
+ * To publish them again, set this to an array of { days, hours } and add a
+ * matching openingHoursSpecification in lib/structured-data.ts.
  */
-export const OFFICE_HOURS: {
-  readonly days: string;
-  readonly hours: string;
-}[] | null = [
-  { days: "Monday – Friday", hours: "8:00 AM – 5:00 PM" },
-  { days: "Saturday & Sunday", hours: "Closed" },
-];
-
-/** Machine-readable equivalent of OFFICE_HOURS for schema.org output. */
-export const OPENING_HOURS_SPECIFICATION = [
-  {
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "08:00",
-    closes: "17:00",
-  },
-];
+export const OFFICE_HOURS: { readonly days: string; readonly hours: string }[] | null =
+  null;
 
 export const MAPS = {
   /** Directions link used across the site (matches the live site's link). */

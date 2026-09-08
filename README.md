@@ -118,8 +118,6 @@ Never commit `.env.local`.
 
 ## Before going live
 
-1. Confirm the office hours flagged `PENDING CLIENT CONFIRMATION` in
-   `lib/constants.ts`, or set `OFFICE_HOURS` to `null`.
-2. Add real social profile URLs to the footer, or leave them out.
-3. Submit `https://www.saudiamushkbar.com/sitemap.xml` in Search Console and
+1. Add real social profile URLs to the footer, or leave them out.
+2. Submit `https://www.saudiamushkbar.com/sitemap.xml` in Search Console and
    watch the coverage report for the two preserved URLs.
