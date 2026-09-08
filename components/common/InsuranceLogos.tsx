@@ -11,9 +11,12 @@ import { cn } from "@/lib/utils";
 export function InsuranceLogos({
   className,
   priority = false,
+  showOthers = false,
 }: {
   className?: string;
   priority?: boolean;
+  /** Appends a "+ Others" item to the end of the row. */
+  showOthers?: boolean;
 }) {
   return (
     <ul
@@ -35,6 +38,12 @@ export function InsuranceLogos({
           />
         </li>
       ))}
+
+      {showOthers ? (
+        <li className="flex items-center justify-center">
+          <span className="font-display text-lg text-brand">+ Others</span>
+        </li>
+      ) : null}
     </ul>
   );
 }

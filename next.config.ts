@@ -36,11 +36,6 @@ const redirects: NonNullable<NextConfig["redirects"]> = async () => {
     ["/womens-health/", "/womens-primary-care-doctor-toledo/"],
     ["/weight-loss/", "/weight-loss-doctor-toledo/"],
 
-    // Service pages that have been taken down for now. Redirected rather than
-    // left to 404, since they were live and linked from the menu.
-    ["/primary-care-doctor-toledo/", "/services/"],
-    ["/hospital-follow-up-primary-care-toledo/", "/services/"],
-
     // Dead WordPress endpoints and archives that should not 404 for crawlers.
     // The old install answered all of these with a redirect to the homepage.
     ["/feed/", "/"],

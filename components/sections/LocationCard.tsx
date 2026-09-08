@@ -4,6 +4,7 @@ import { Clock, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/common/Container";
 import { Button } from "@/components/ui/button";
 import { CONTACT, CTA, MAPS, OFFICE_HOURS, PRACTICE } from "@/lib/constants";
+import type { PageAccent } from "@/lib/landing-types";
 
 /**
  * The location / office photo / CTA strip used at the foot of the service
@@ -17,7 +18,7 @@ export function LocationCard({
   ctaTitle?: string;
   ctaDescription?: string;
   /** Matches the page's hero accent so the two call buttons agree. */
-  accent?: "alert" | "berry";
+  accent?: PageAccent;
 }) {
   return (
     <section className="py-16 lg:py-20">
@@ -76,10 +77,10 @@ export function LocationCard({
           </div>
 
           <Image
-            src="/images/clinic-image.jpeg"
+            src="/images/general/toledo-clinic-office-exterior.webp"
             alt="The medical office building on N. Holland-Sylvania Road in Toledo where Dr. Mushkbar sees patients, with parking directly outside the entrance"
-            width={1805}
-            height={871}
+            width={2976}
+            height={3204}
             sizes="(max-width: 1024px) 100vw, 30vw"
             className="h-full min-h-56 w-full rounded-card object-cover shadow-card"
           />

@@ -43,6 +43,8 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Feeling unwell today? Dr. Saudia Mushkbar, MD offers same-day appointments in Toledo for urgent, non-emergency concerns like colds, flu, sore throat and infections.",
     serviceName: "Same-day primary care visit",
+    // The artwork on this page is indigo, so the red accent would clash.
+    accent: "indigo",
     badge: { label: "Same-Day Care", icon: "CalendarClock" },
     headingLead: "Same-Day",
     headingAccent: "Primary Care",
@@ -102,6 +104,8 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Dr. Saudia Mushkbar, MD provides primary care for women in Toledo — routine exams, contraception counseling, menopause support and chronic condition management.",
     serviceName: "Women’s primary care",
+    // The artwork on this page is pink, so the red accent would clash.
+    accent: "pink",
     badge: { label: "Women’s Primary Care", icon: "Flower2" },
     headingLead: "Women’s",
     headingAccent: "Primary Care",
@@ -117,8 +121,8 @@ export const landingPages: LandingPageData[] = [
     image: {
       src: "/images/doctor/womens-primary-care-doctor-toledo.jpg",
       alt: "Dr. Saudia Mushkbar, MD with a patient beside a panel headed “Women’s Health Care At Every Stage of Life”, listing annual wellness exams, pap smears and breast exams, menstrual and hormonal health, contraception counseling, preconception and pregnancy planning, menopause support, bone health screening, management of chronic conditions, and personalized care for all women",
-      width: 1536,
-      height: 1024,
+      width: 1080,
+      height: 977,
     },
     grid: {
       title: "Comprehensive Women’s Health Services",
@@ -160,6 +164,8 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Dr. Saudia Mushkbar, MD provides primary care for type 1 and type 2 diabetes in Toledo — blood sugar monitoring, A1C testing, medication and lifestyle support.",
     serviceName: "Diabetes management",
+    // The artwork on this page is navy, so the red accent would clash.
+    accent: "navy",
     badge: { label: "Diabetes Care", icon: "Droplet" },
     headingLead: "Diabetes",
     headingAccent: "Primary Care",
@@ -274,6 +280,7 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Schedule your Medicare Annual Wellness Visit with Dr. Saudia Mushkbar, MD in Toledo — a yearly review of your health history, medications and preventive care plan.",
     serviceName: "Medicare Annual Wellness Visit",
+    accent: "rose",
     badge: { label: "Medicare Wellness", icon: "ClipboardCheck" },
     headingLead: "Medicare Annual",
     headingAccent: "Wellness Visit",
@@ -337,6 +344,7 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Book your annual physical with Dr. Saudia Mushkbar, MD in Toledo — a comprehensive yearly checkup for adults and children with screenings and vaccinations.",
     serviceName: "Annual physical examination",
+    accent: "forest",
     badge: { label: "Annual Physical", icon: "ClipboardCheck" },
     headingLead: "Annual Physical &",
     headingAccent: "Wellness Exam",
@@ -392,6 +400,8 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Dr. Saudia Mushkbar, MD provides primary care for older adults in Toledo — healthy aging, medication management, chronic disease support and Medicare wellness visits.",
     serviceName: "Senior primary care",
+    // The artwork on this page is violet, so the red accent would clash.
+    accent: "violet",
     badge: { label: "Senior Care", icon: "HeartHandshake" },
     headingLead: "Senior",
     headingAccent: "Primary Care",
@@ -525,6 +535,7 @@ export const landingPages: LandingPageData[] = [
     metaDescription:
       "Dr. Saudia Mushkbar, MD is accepting new patients of all ages in Toledo, Ohio. Most insurance plans accepted, with same-day and same-week appointments available.",
     serviceName: "New patient appointment",
+    accent: "cobalt",
     headingLead: "New Patients",
     headingAccent: "Welcome",
     tagline: "Compassionate care for you and your family.",
@@ -692,6 +703,132 @@ export const landingPages: LandingPageData[] = [
       "/diabetes-doctor-toledo",
       "/high-blood-pressure-doctor-toledo",
       "/annual-physical-exam-toledo",
+    ],
+  },
+  // -------------------------------------------------------------- primary care
+  {
+    path: "/primary-care-doctor-toledo",
+    label: "Primary Care in Toledo",
+    metaTitle: "Primary Care Doctor in Toledo, OH",
+    metaDescription:
+      "Dr. Saudia Mushkbar, MD is a board-certified family physician providing primary care for adults, seniors and children in Toledo, Ohio. Accepting new patients.",
+    serviceName: "Primary care",
+    accent: "crimson",
+    headingLead: "Primary Care",
+    headingAccent: "Doctor in Toledo, OH",
+    tagline: "Compassionate Care for You and Your Family",
+    intro:
+      "Dr. Saudia Mushkbar, MD is a board-certified family physician providing personalized primary care for adults, seniors, and children. We focus on preventive care, managing chronic conditions, and helping you live a healthier life.",
+    checklist: [
+      "Same-Day & Same-Week Appointments",
+      "Accepting New Patients",
+      "Medicare, Medicare Advantage & Most Insurance Plans",
+      "Convenient Location in Toledo, OH",
+    ],
+    image: {
+      src: "/images/doctor/primary-care-doctor-toledo.jpg",
+      alt: "Dr. Saudia Mushkbar, MD in her Toledo office beside a panel headed “Your Primary Care Doctor in Toledo”, listing preventive care and annual exams, care for all ages, chronic disease management, medication management, most insurance plans accepted, and a convenient Toledo location",
+      width: 1224,
+      height: 1285,
+    },
+    grid: {
+      title: "Comprehensive Primary Care Services",
+      items: [
+        { title: "Care for the Whole Family", description: "We care for adults, seniors, and children of all ages.", icon: "Users" },
+        { title: "Preventive Care & Screenings", description: "Annual physicals, wellness visits, and preventive screenings.", icon: "ShieldCheck" },
+        { title: "Chronic Disease Management", description: "Diabetes, hypertension, high cholesterol, asthma, and more.", icon: "Activity" },
+        { title: "Medication Management", description: "Safe, effective, and personalized medication management.", icon: "Pill" },
+        { title: "Women’s Health", description: "Comprehensive care for women at every stage of life.", icon: "Flower2" },
+        { title: "Pediatric Care", description: "Compassionate care for infants, children, and adolescents.", icon: "Baby" },
+      ],
+    },
+    whyChoose: {
+      title: "Why Patients Choose Dr. Mushkbar",
+      items: [
+        { label: "Personalized Attention", text: "we listen and create care plans tailored to you." },
+        { label: "Experienced & Compassionate", text: "over 20 years caring for patients." },
+        { label: "Convenient Access", text: "same-day and same-week appointments available." },
+        { label: "Insurance Friendly", text: "Medicare, Medicare Advantage and most plans accepted." },
+        { label: "Local & Trusted", text: "proudly serving the Toledo community." },
+      ],
+    },
+    cta: {
+      title: "Ready to Take the Next Step Toward Better Health?",
+      description:
+        "We’re accepting new patients and would love to care for you and your family.",
+    },
+    closing: {
+      lead: "Your health is our priority. Compassionate care for you and your family — today and for years to come.",
+      script: "We look forward to caring for you!",
+    },
+    related: [
+      "/same-day-primary-care-toledo",
+      "/annual-physical-exam-toledo",
+      "/new-patients",
+    ],
+  },
+
+  // --------------------------------------------------------- hospital follow-up
+  {
+    path: "/hospital-follow-up-primary-care-toledo",
+    label: "Hospital Follow-Up Care",
+    metaTitle: "Hospital Follow-Up Care in Toledo, OH",
+    metaDescription:
+      "Recently discharged? Dr. Saudia Mushkbar, MD provides hospital follow-up care in Toledo — medication reconciliation, discharge review and coordination with your specialists.",
+    serviceName: "Hospital discharge follow-up visit",
+    accent: "ultramarine",
+    headingLead: "Hospital Follow-Up Care",
+    headingAccent: "in Toledo, OH",
+    tagline: "Continuity of Care for a Stronger Recovery",
+    intro:
+      "Recovery doesn’t end when you leave the hospital. Dr. Saudia Mushkbar, MD provides comprehensive follow-up care to help you heal, manage medications, and prevent readmissions.",
+    checklist: [
+      "Timely Follow-Up Appointments",
+      "Medication Review & Reconciliation",
+      "Review of Discharge Instructions",
+      "Chronic Disease Management",
+      "Coordination with Specialists",
+    ],
+    image: {
+      src: "/images/doctor/hospital-follow-up-primary-care-toledo.jpg",
+      alt: "Dr. Saudia Mushkbar, MD in a hospital corridor beside a panel headed “Hospital Follow-Up Care”, listing a post-hospital visit, medication reconciliation, review of test results, coordination with specialists, monitoring for complications, and ongoing support",
+      width: 1224,
+      height: 1285,
+    },
+    grid: {
+      title: "We Help You Heal and Stay Healthy",
+      items: [
+        { title: "Post-Hospital Follow-Up", description: "Timely visits to monitor your recovery and address any concerns.", icon: "Hospital" },
+        { title: "Medication Management", description: "We review your medications to ensure safety and effectiveness.", icon: "Pill" },
+        { title: "Discharge Review", description: "We go over your hospital instructions and ensure you understand your plan.", icon: "ClipboardCheck" },
+        { title: "Chronic Condition Monitoring", description: "Ongoing care for conditions like diabetes, hypertension, heart disease and more.", icon: "Activity" },
+        { title: "Care Coordination", description: "We communicate with your specialists to provide seamless care.", icon: "BriefcaseMedical" },
+        { title: "Prevent Readmissions", description: "Our goal is to support your recovery and help you stay out of the hospital.", icon: "ShieldCheck" },
+      ],
+    },
+    whyChoose: {
+      title: "Why Choose Dr. Mushkbar for Your Follow-Up Care?",
+      items: [
+        { label: "Experienced & Compassionate", text: "over 20 years of caring for patients." },
+        { label: "Focused on Your Recovery", text: "personalized care plans tailored to you." },
+        { label: "Convenient Appointments", text: "same-day and same-week availability." },
+        { label: "Comprehensive Care", text: "from short-term recovery to long-term wellness." },
+        { label: "Local & Trusted", text: "proudly serving the Toledo community." },
+      ],
+    },
+    cta: {
+      title: "Recently Discharged? Let’s Continue Your Recovery Together.",
+      description:
+        "Schedule your follow-up appointment today and take the next step toward better health.",
+    },
+    closing: {
+      lead: "Your recovery is our priority.",
+      script: "Compassionate care. Close to home.",
+    },
+    related: [
+      "/senior-primary-care-doctor-toledo",
+      "/medicare-primary-care-doctor-toledo",
+      "/primary-care-doctor-toledo",
     ],
   },
 ];

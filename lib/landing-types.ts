@@ -5,6 +5,24 @@
  * one set of components and one SEO pattern. Copy lives in `lib/landing.ts`.
  */
 
+/**
+ * Accent for a page's split headline and call buttons. Defaults to the site's
+ * red; the rest let a page pick up the dominant colour of its own artwork.
+ */
+export type PageAccent =
+  | "alert"
+  | "berry"
+  | "navy"
+  | "indigo"
+  | "pink"
+  | "violet"
+  | "forest"
+  | "rose"
+  | "crimson"
+  | "ultramarine"
+  | "cobalt"
+  | "sky";
+
 export type LandingFeature = {
   title: string;
   description?: string;
@@ -40,11 +58,8 @@ export type LandingPageData = {
   metaDescription: string;
   /** Name used in MedicalProcedure structured data. */
   serviceName: string;
-  /**
-   * Accent for the split headline and the call button. Defaults to the site's
-   * red; "berry" suits pages whose artwork is pink rather than red.
-   */
-  accent?: "berry";
+  /** Accent for the split headline and call buttons. Defaults to the red. */
+  accent?: Exclude<PageAccent, "alert">;
   badge?: { label: string; icon: string };
   /** First headline line, set in the brand colour. */
   headingLead: string;

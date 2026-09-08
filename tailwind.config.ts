@@ -66,6 +66,67 @@ const config: Config = {
          * 5.5:1 on the page background and 5.7:1 behind white button text.
          */
         berry: "#C41C67",
+        /**
+         * #063553 — a second opt-in accent, for pages whose artwork is navy.
+         * 12.5:1 on the page background and 12.8:1 behind white button text.
+         */
+        navy: "#063553",
+        /**
+         * #241061 — a third opt-in accent, for pages whose artwork is indigo.
+         * 15.5:1 on the page background and 15.9:1 behind white button text.
+         */
+        indigo: "#241061",
+        /**
+         * #E54995 — a fourth opt-in accent, matching the pink artwork on the
+         * women's health page. It reads at 3.6:1 on the page background, which
+         * clears the 3:1 large-text threshold for the display headline but not
+         * the 4.5:1 needed for button labels, so `pink-strong` is a darkened
+         * shade of the same hue used behind white button text at 4.8:1.
+         */
+        pink: {
+          DEFAULT: "#E54995",
+          strong: "#C53F80",
+        },
+        /**
+         * #1E0A86 — a fifth opt-in accent, for the senior care page.
+         * 14.2:1 on the page background and 14.6:1 behind white button text.
+         */
+        violet: "#1E0A86",
+        /**
+         * #16573F — a sixth opt-in accent, for the annual physical page.
+         * 8.3:1 on the page background, 8.5:1 behind white button text.
+         */
+        forest: "#16573F",
+        /**
+         * #B64870 — for the Medicare annual wellness visit page. 4.9:1 on the
+         * page background, 5.1:1 behind white button text.
+         */
+        rose: "#B64870",
+        /**
+         * #E20954 — for the primary care page. 4.7:1 on the page background,
+         * 4.8:1 behind white button text.
+         */
+        crimson: "#E20954",
+        /**
+         * #2F2894 — for the hospital follow-up page. 11.1:1 on the page
+         * background, 11.3:1 behind white button text.
+         */
+        ultramarine: "#2F2894",
+        /**
+         * #033C84 — for the new patients page. 10.3:1 on the page background,
+         * 10.6:1 behind white button text.
+         */
+        cobalt: "#033C84",
+        /**
+         * The Medicare page's light blue. #97C7EE reads at only 1.75:1 on the
+         * page background, so it cannot carry headline or button text; it is
+         * kept for tints. `strong` is the same hue darkened until white button
+         * text passes at 5.9:1, and it is what the headline and buttons use.
+         */
+        sky: {
+          DEFAULT: "#97C7EE",
+          strong: "#1F67A3",
+        },
         cream: "#FCF7ED",
         ink: "#272626",
         body: "#625A53",

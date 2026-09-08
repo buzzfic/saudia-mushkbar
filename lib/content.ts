@@ -71,7 +71,7 @@ export const services: ServiceCard[] = [
     title: "Pediatric & Adult Care",
     description: "Quality care for children, adults, and seniors alike.",
     icon: "Users",
-    href: "/services",
+    href: "/primary-care-doctor-toledo",
   },
   {
     title: "Weight Loss & Wellness",
@@ -86,36 +86,43 @@ export const services: ServiceCard[] = [
 export const conditions = [
   {
     title: "Chronic Disease Management",
+    icon: "Activity",
     description:
       "Expert care for conditions such as high blood pressure, diabetes, asthma, and thyroid disorders, with a focus on long-term health.",
   },
   {
     title: "Preventive Screenings",
+    icon: "Microscope",
     description:
       "Routine checks for cholesterol, blood sugar, cancer screenings, and other preventive tests to catch health issues early.",
   },
   {
     title: "Annual Physicals & Wellness Exams",
+    icon: "ClipboardCheck",
     description:
       "Comprehensive yearly checkups for adults and children to monitor health, and update vaccinations.",
   },
   {
     title: "Women’s Health",
+    icon: "Flower2",
     description:
       "Care tailored for women at every stage of life, including routine gynecological exams, family planning, and menopause support.",
   },
   {
     title: "Pediatric Care",
+    icon: "Baby",
     description:
       "Compassionate medical services for children, including check-ups, vaccinations, and treatment for common childhood illnesses.",
   },
   {
     title: "Senior Care",
+    icon: "HeartHandshake",
     description:
       "Dedicated primary care for older adults, focusing on healthy aging, medication management, and chronic disease support.",
   },
   {
     title: "General Health Concerns",
+    icon: "Thermometer",
     description:
       "Same-day visits for common issues such as colds, flu, infections, allergies, and minor injuries.",
   },

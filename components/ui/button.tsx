@@ -21,6 +21,26 @@ const buttonVariants = cva(
           "bg-alert text-white hover:bg-[#c8181c] active:bg-[#ab1417]",
         berry:
           "bg-berry text-white hover:bg-[#a51555] active:bg-[#8c1147]",
+        navy:
+          "bg-navy text-white hover:bg-[#0a4a72] active:bg-[#052a42]",
+        indigo:
+          "bg-indigo text-white hover:bg-[#33188a] active:bg-[#1c0c4d]",
+        pink:
+          "bg-pink-strong text-white hover:bg-[#ad376f] active:bg-[#95305f]",
+        violet:
+          "bg-violet text-white hover:bg-[#2b0fbd] active:bg-[#17086a]",
+        forest:
+          "bg-forest text-white hover:bg-[#1d7454] active:bg-[#104330]",
+        rose:
+          "bg-rose text-white hover:bg-[#9d3d60] active:bg-[#843351]",
+        crimson:
+          "bg-crimson text-white hover:bg-[#c00848] active:bg-[#a2073d]",
+        ultramarine:
+          "bg-ultramarine text-white hover:bg-[#3d34bd] active:bg-[#241e70]",
+        cobalt:
+          "bg-cobalt text-white hover:bg-[#04509f] active:bg-[#022c62]",
+        sky:
+          "bg-sky-strong text-white hover:bg-[#2579bd] active:bg-[#195586]",
         outline:
           "border border-brand/30 bg-transparent text-brand hover:border-brand hover:bg-brand hover:text-white",
         "outline-light":

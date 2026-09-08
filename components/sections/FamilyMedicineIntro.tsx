@@ -1,32 +1,39 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Heart } from "lucide-react";
 
 import { Container } from "@/components/common/Container";
 import { copy } from "@/lib/content";
 
-/** "Your Family Doctor in Toledo — Putting You First" */
+/**
+ * "Your Family Doctor in Toledo — Putting You First"
+ *
+ * Laid out as on the original site: the headline on the left with its second
+ * line in red, a heart rule beneath it, and the copy in a second column behind
+ * a hairline divider. No photograph — the headline carries the section.
+ */
 export function FamilyMedicineIntro() {
   return (
-    <section className="py-20 lg:py-28">
+    <section className="bg-cream py-20 lg:py-28">
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <Image
-              src="/images/general/family-medicine-care-2.png"
-              alt="A physician sitting with an older patient during a primary care visit"
-              width={570}
-              height={840}
-              sizes="(max-width: 1024px) 100vw, 45vw"
-              className="aspect-[3/4] w-full rounded-card object-cover shadow-card"
-            />
+            <h2 className="text-display-2">
+              <span className="block">Your Family Doctor in Toledo —</span>{" "}
+              <span className="block text-alert">Putting You First</span>
+            </h2>
+
+            <p
+              aria-hidden="true"
+              className="mt-10 flex items-center gap-4 text-brand/30"
+            >
+              <span className="h-px flex-1 bg-current" />
+              <Heart className="size-4 shrink-0 text-brand/50" />
+              <span className="h-px flex-1 bg-current" />
+            </p>
           </div>
 
-          <div>
-            <h2 className="text-display-2">
-              Your Family Doctor in Toledo — Putting You First
-            </h2>
-            <p className="mt-6 max-w-prose text-lg leading-relaxed text-body">
+          <div className="lg:border-l lg:border-hairline lg:pl-16">
+            <p className="max-w-prose text-lg leading-relaxed text-body">
               {copy.familyMedicineIntro}
             </p>
             <Link

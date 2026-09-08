@@ -69,9 +69,14 @@ export function ReviewBadges({ className }: { className?: string }) {
       </article>
 
       <article className="flex flex-col items-start gap-4 rounded-card border border-hairline bg-white p-7 shadow-card">
-        <p className="font-display text-2xl text-brand">
-          {REVIEWS.healthgrades.label}
-        </p>
+        <Image
+          src="/images/logo/healthgrade.svg"
+          alt={REVIEWS.healthgrades.label}
+          width={227}
+          height={33}
+          sizes="150px"
+          className="h-7 w-auto"
+        />
         <div className="flex items-baseline gap-3">
           <p className="font-display text-4xl text-brand">
             {REVIEWS.healthgrades.rating}

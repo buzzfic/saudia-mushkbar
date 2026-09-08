@@ -24,9 +24,9 @@ export function LandingHero({
   data: LandingHeroData;
   crumbs: Crumb[];
 }) {
-  // These hero images are composed graphics with readable text inside them. A
-  // landscape one squeezed into a 45%-wide column renders that text far too
-  // small, so wide images get the full content width beneath the copy instead.
+  // Every hero image sits beside the copy. A landscape one still needs more
+  // room than a portrait to keep the text inside it readable, so it takes the
+  // larger share of the row and the feature points drop to two columns.
   const isWide = data.image.width >= data.image.height;
   const accent = data.accent ?? "alert";
 
@@ -38,7 +38,9 @@ export function LandingHero({
         <div
           className={cn(
             "mt-10 grid items-start gap-12 [&>*]:min-w-0",
-            isWide ? "lg:gap-10" : "lg:grid-cols-[1.1fr_0.9fr] lg:gap-14",
+            isWide
+              ? "lg:grid-cols-[0.85fr_1.15fr] lg:gap-12"
+              : "lg:grid-cols-[1.1fr_0.9fr] lg:gap-14",
           )}
         >
           <div>
@@ -53,7 +55,27 @@ export function LandingHero({
 
             <h1 className={cn("text-display-hero", data.badge ? "mt-6" : "mt-0")}>
               <span className="block">{data.headingLead}</span>{" "}
-              <span className={cn("block", accent === "berry" ? "text-berry" : "text-alert")}>
+              <span
+                className={cn(
+                  "block",
+                  {
+                    berry: "text-berry",
+                    navy: "text-navy",
+                    indigo: "text-indigo",
+                    pink: "text-pink",
+                    violet: "text-violet",
+                    forest: "text-forest",
+                    rose: "text-rose",
+                    crimson: "text-crimson",
+                    ultramarine: "text-ultramarine",
+                    cobalt: "text-cobalt",
+                    // The light sky blue is unreadable as text; use its
+                    // darkened companion for the headline.
+                    sky: "text-sky-strong",
+                    alert: "text-alert",
+                  }[accent],
+                )}
+              >
                 {data.headingAccent}
               </span>
             </h1>
@@ -72,7 +94,12 @@ export function LandingHero({
             </p>
 
             {data.points?.length ? (
-              <ul className="mt-9 grid grid-cols-2 gap-x-5 gap-y-7 lg:grid-cols-4">
+              <ul
+                className={cn(
+                  "mt-9 grid grid-cols-2 gap-x-5 gap-y-7",
+                  isWide ? "lg:grid-cols-2" : "lg:grid-cols-4",
+                )}
+              >
                 {data.points.map((point) => (
                   <li key={point.title}>
                     <span className="grid size-11 place-items-center rounded-full bg-accent-soft text-brand">
@@ -127,10 +154,10 @@ export function LandingHero({
               width={data.image.width}
               height={data.image.height}
               priority
-              sizes={isWide ? "(max-width: 1024px) 92vw, 1400px" : "(max-width: 1024px) 90vw, 48vw"}
+              sizes="(max-width: 1024px) 90vw, 55vw"
               className={cn(
-                "mx-auto h-auto w-full rounded-card shadow-card",
-                isWide ? "max-w-none" : "max-w-md lg:mx-0 lg:max-w-none",
+                "mx-auto h-auto w-full rounded-card shadow-card lg:mx-0 lg:max-w-none",
+                isWide ? "max-w-2xl" : "max-w-md",
               )}
             />
 

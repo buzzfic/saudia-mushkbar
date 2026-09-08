@@ -45,10 +45,10 @@ export default function AboutPage() {
         title="Meet Your Family Medicine Doctor"
         intro={copy.doctorBio}
         image={{
-          src: "/images/doctor/doctor-saudia-mushkbar-scrubs.jpeg",
-          alt: "Dr. Saudia Mushkbar, family medicine physician in Toledo, Ohio, wearing navy scrubs with a stethoscope",
-          width: 899,
-          height: 1320,
+          src: "/images/doctor/doctor-saudia-mushkbar-white-coat.jpg",
+          alt: "Dr. Saudia Mushkbar, MD, family medicine physician in Toledo, Ohio, in a white coat",
+          width: 1706,
+          height: 2560,
         }}
       >
         <ul className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -82,7 +82,7 @@ export default function AboutPage() {
                 {copy.whatIsFamilyMedicine}
               </p>
               <Link
-                href="/services"
+                href="/primary-care-doctor-toledo"
                 className="mt-7 inline-flex items-center gap-2 font-medium text-brand underline decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-brand-500"
               >
                 Primary care in Toledo

@@ -41,6 +41,7 @@ const crumbs = [
 ];
 
 const hero: LandingHeroData = {
+  accent: "sky",
   headingLead: "Medicare Primary Care",
   headingAccent: "Doctor in Toledo, OH",
   tagline: "Now Accepting New Medicare & Medicare Advantage Patients",
@@ -215,6 +216,7 @@ export default function MedicarePrimaryCarePage() {
       </section>
 
       <LocationCard
+        accent="sky"
         ctaTitle="Ready to Schedule?"
         ctaDescription="Call to confirm your specific Medicare plan and book your visit."
       />

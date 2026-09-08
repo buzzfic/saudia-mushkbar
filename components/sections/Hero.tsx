@@ -1,16 +1,42 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Phone } from "lucide-react";
+import {
+  CalendarCheck,
+  CalendarDays,
+  CheckCircle2,
+  Phone,
+  ShieldCheck,
+  Sprout,
+} from "lucide-react";
 
 import { Container } from "@/components/common/Container";
 import { InsuranceLogos } from "@/components/common/InsuranceLogos";
 import { Button } from "@/components/ui/button";
-import { CTA } from "@/lib/constants";
+import { CONTACT, CTA } from "@/lib/constants";
+import { insuranceSummary } from "@/lib/content";
+
+/** The three points that sat beneath the plan logos on the original hero. */
+const highlights = [
+  {
+    icon: ShieldCheck,
+    title: "In-network with leading plans:",
+    body: insuranceSummary,
+  },
+  {
+    icon: CalendarDays,
+    title: "Same-day & same-week appointments available.",
+  },
+  {
+    icon: Sprout,
+    title: "Weight Loss & Wellness",
+    body: "GLP-1 programs and personalized plans to help you feel your best.",
+  },
+];
 
 /**
- * Homepage hero, reproducing the original section: the "NOW" rule, the split
- * red headline, the in-network subhead and the Medicare Advantage logo row,
- * with Dr. Mushkbar's portrait alongside as on every other hero in the site.
+ * Homepage hero, reproducing the original left column: the "NOW" rule, the
+ * split red headline, the in-network subhead, the plan logos ending in
+ * "+ Others", a heart rule, and the three highlights beneath it.
  */
 export function Hero() {
   return (
@@ -31,31 +57,65 @@ export function Hero() {
               </span>
             </h1>
 
-            <p className="mt-6 font-display text-display-4 text-brand">
+            <p className="mt-5 font-display text-lg text-brand">
               In-network with leading Medicare Advantage plans
             </p>
 
-            <span aria-hidden="true" className="mt-7 block h-0.5 w-16 bg-accent" />
+            <InsuranceLogos
+              className="mt-7 max-w-xl gap-x-7 sm:grid-cols-4 lg:grid-cols-4"
+              priority
+              showOthers
+            />
 
-            <InsuranceLogos className="mt-8 max-w-lg gap-x-8 lg:grid-cols-3" priority />
-            <p className="mt-5 text-[0.9375rem] text-body">&amp; others.</p>
+            <p
+              aria-hidden="true"
+              className="mt-9 flex max-w-xl items-center gap-4 text-brand/25"
+            >
+              <span className="h-px flex-1 bg-current" />
+              <span className="text-brand/50">&#9825;</span>
+              <span className="h-px flex-1 bg-current" />
+            </p>
+
+            <ul className="mt-8 flex max-w-xl flex-col gap-5">
+              {highlights.map((item) => (
+                <li key={item.title} className="flex items-start gap-3.5">
+                  <span className="grid size-10 shrink-0 place-items-center rounded-full bg-accent-soft text-brand">
+                    <item.icon className="size-5" aria-hidden="true" />
+                  </span>
+                  <div>
+                    <p className="font-display text-lg leading-snug text-brand">
+                      {item.title}
+                    </p>
+                    {item.body ? (
+                      <p className="mt-1 text-[0.9375rem] leading-relaxed text-body">
+                        {item.body}
+                      </p>
+                    ) : null}
+                  </div>
+                </li>
+              ))}
+            </ul>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <Button asChild variant="brand" size="lg">
+                <Link href={CTA.contactHref}>
+                  <CalendarCheck className="size-4" aria-hidden="true" />
+                  Schedule a Visit
+                </Link>
+              </Button>
               <Button asChild variant="alert" size="lg">
                 <a href={CTA.callHref}>
                   <Phone className="size-4" aria-hidden="true" />
-                  {CTA.callLabel}
+                  {CONTACT.phoneDisplay}
                 </a>
-              </Button>
-              <Button asChild variant="brand" size="lg">
-                <Link href={CTA.contactHref}>
-                  <MapPin className="size-4" aria-hidden="true" />
-                  {CTA.contactLabel}
-                </Link>
               </Button>
             </div>
 
-            <p className="mt-4 text-sm text-body">
+            <p className="mt-4 flex items-start gap-2 text-sm text-body">
+              <CheckCircle2
+                className="mt-0.5 size-4 shrink-0 text-brand"
+                aria-hidden="true"
+              />
               Call to schedule or confirm your specific insurance plan.
             </p>
           </div>
@@ -70,25 +130,8 @@ export function Hero() {
               sizes="(max-width: 1024px) 90vw, 44vw"
               className="w-full"
             />
-
-            <div className="rounded-card border border-hairline bg-white/90 p-5 shadow-card backdrop-blur-sm sm:p-7 lg:absolute lg:-bottom-2 lg:-left-6 lg:w-[19rem]">
-              <h2 className="font-display text-lg leading-snug text-brand">
-                Same-day &amp; same-week appointments
-              </h2>
-              <p className="mt-2 text-[0.9375rem] leading-relaxed text-body">
-                Plus GLP-1 weight loss programs and personalized wellness plans
-                to help you feel your best.
-              </p>
-              <Link
-                href="/same-day-primary-care-toledo"
-                className="mt-4 inline-flex text-[0.9375rem] font-medium text-brand underline decoration-accent decoration-2 underline-offset-4 transition-colors hover:text-brand-500"
-              >
-                See how same-day care works
-              </Link>
-            </div>
           </div>
         </div>
-
       </Container>
     </section>
   );
