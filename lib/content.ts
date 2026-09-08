@@ -9,16 +9,24 @@ export type InsurancePlan = {
   logo: string;
   width: number;
   height: number;
+  /**
+   * Rendered height in px. Set per logo rather than shared, because these are
+   * different kinds of lockup: a one-word wordmark is almost all lettering,
+   * while a stacked mark is an icon plus two lines of small type. Matching
+   * their heights makes the stacked ones look tiny, so each is sized until its
+   * *lettering* reads at roughly the same size as the rest.
+   */
+  displayHeight: number;
 };
 
 /** Medicare Advantage plan logos shown on the homepage hero and Medicare page. */
 export const insurancePlans: InsurancePlan[] = [
-  { name: "Humana", logo: "/images/insurance/humana.webp", width: 1500, height: 309 },
-  { name: "Anthem", logo: "/images/insurance/anthem.svg", width: 172, height: 60 },
-  { name: "Aetna", logo: "/images/insurance/aetna.svg", width: 185, height: 36 },
-  { name: "MediGold", logo: "/images/insurance/medigold.webp", width: 2000, height: 864 },
-  { name: "UnitedHealthcare", logo: "/images/insurance/unitedhealthcare.png", width: 1417, height: 759 },
-  { name: "Medical Mutual", logo: "/images/insurance/medical-mutual.png", width: 599, height: 107 },
+  { name: "Humana", logo: "/images/insurance/humana.webp", width: 1500, height: 309, displayHeight: 22 },
+  { name: "Anthem", logo: "/images/insurance/anthem.svg", width: 172, height: 60, displayHeight: 30 },
+  { name: "Aetna", logo: "/images/insurance/aetna.svg", width: 185, height: 36, displayHeight: 22 },
+  { name: "MediGold", logo: "/images/insurance/medigold.webp", width: 2000, height: 864, displayHeight: 52 },
+  { name: "UnitedHealthcare", logo: "/images/insurance/unitedhealthcare.png", width: 1417, height: 759, displayHeight: 52 },
+  { name: "Medical Mutual", logo: "/images/insurance/medical-mutual.png", width: 599, height: 107, displayHeight: 24 },
 ];
 
 export const insuranceSummary =
