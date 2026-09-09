@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone } from "lucide-react";
+import { CalendarCheck, Phone } from "lucide-react";
 
 import { Container } from "@/components/common/Container";
 import { SectionHeading } from "@/components/common/SectionHeading";
@@ -47,9 +47,9 @@ export function BookingProcess() {
             </a>
           </Button>
           <Button asChild variant="brand" size="lg">
-            <Link href={CTA.contactHref}>
-              <MapPin className="size-4" aria-hidden="true" />
-              {CTA.contactLabel}
+            <Link href={CTA.bookHref}>
+              <CalendarCheck className="size-4" aria-hidden="true" />
+              {CTA.bookLabel}
             </Link>
           </Button>
         </div>

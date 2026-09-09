@@ -98,9 +98,9 @@ export function Hero() {
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button asChild variant="brand" size="lg">
-                <Link href={CTA.contactHref}>
+                <Link href={CTA.bookHref}>
                   <CalendarCheck className="size-4" aria-hidden="true" />
-                  Schedule a Visit
+                  {CTA.bookLabel}
                 </Link>
               </Button>
               <Button asChild variant="alert" size="lg">

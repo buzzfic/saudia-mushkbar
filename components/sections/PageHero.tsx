@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Phone } from "lucide-react";
+import { CalendarCheck, Phone } from "lucide-react";
 
 import { Breadcrumbs, type Crumb } from "@/components/common/Breadcrumbs";
 import { Container } from "@/components/common/Container";
@@ -62,9 +62,9 @@ export function PageHero({
                   </a>
                 </Button>
                 <Button asChild variant="brand" size="lg">
-                  <Link href={CTA.contactHref}>
-                    <MapPin className="size-4" aria-hidden="true" />
-                    {CTA.contactLabel}
+                  <Link href={CTA.bookHref}>
+                    <CalendarCheck className="size-4" aria-hidden="true" />
+                    {CTA.bookLabel}
                   </Link>
                 </Button>
               </div>

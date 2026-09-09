@@ -88,12 +88,17 @@ export const ANALYTICS = {
 
 /**
  * Appointments are booked by phone, as they were on the original site, so the
- * primary call to action dials the office directly. The secondary action goes
- * to the contact page for the address, hours and directions.
+ * primary call to action dials the office directly. Directions and the address
+ * are reached from the nav and the footer rather than a button.
  */
 export const CTA = {
   callHref: CONTACT.phoneHref,
   callLabel: `Call ${CONTACT.phoneDisplay}`,
-  contactHref: "/contact",
-  contactLabel: "Contact & Directions",
+  /**
+   * Online scheduling is not live yet. The button is present on every page and
+   * leads to a placeholder that says so and points people to the phone, so the
+   * path is already in place for when a booking provider is connected.
+   */
+  bookHref: "/book-online",
+  bookLabel: "Book Online",
 } as const;

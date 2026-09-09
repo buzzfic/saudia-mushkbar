@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone } from "lucide-react";
+import { CalendarCheck, Phone } from "lucide-react";
 
 import { Container } from "@/components/common/Container";
 import { Button } from "@/components/ui/button";
@@ -9,10 +9,13 @@ export function FinalCTA({
   title = "Looking for a Family Doctor in Toledo?",
   description = "Dr. Saudia Mushkbar is welcoming new patients.",
   note = "Same-Day & Same-Week Appointments Available",
+  /** Off on the booking page itself, where the button would link to itself. */
+  showBook = true,
 }: {
   title?: string;
   description?: string;
   note?: string;
+  showBook?: boolean;
 }) {
   return (
     <section className="relative overflow-hidden bg-brand py-20 text-white lg:py-24">
@@ -36,12 +39,14 @@ export function FinalCTA({
                 {CTA.callLabel}
               </a>
             </Button>
-            <Button asChild variant="outline-light" size="lg">
-              <Link href={CTA.contactHref}>
-                <MapPin className="size-4" aria-hidden="true" />
-                {CTA.contactLabel}
-              </Link>
-            </Button>
+            {showBook ? (
+              <Button asChild variant="outline-light" size="lg">
+                <Link href={CTA.bookHref}>
+                  <CalendarCheck className="size-4" aria-hidden="true" />
+                  {CTA.bookLabel}
+                </Link>
+              </Button>
+            ) : null}
           </div>
         </div>
       </Container>

@@ -144,8 +144,8 @@ export function Footer() {
               <Button asChild variant="alert" size="md">
                 <a href={CTA.callHref}>{CTA.callLabel}</a>
               </Button>
-              <Button asChild variant="outline-light" size="md">
-                <Link href={CTA.contactHref}>{CTA.contactLabel}</Link>
+              <Button asChild variant="primary" size="md">
+                <Link href={CTA.bookHref}>{CTA.bookLabel}</Link>
               </Button>
             </div>
 

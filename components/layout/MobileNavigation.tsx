@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, MapPin, Phone } from "lucide-react";
+import { CalendarCheck, MapPin, Menu, Phone } from "lucide-react";
 
 import {
   Sheet,
@@ -110,10 +110,10 @@ export function MobileNavigation() {
                   {CTA.callLabel}
                 </a>
               </Button>
-              <Button asChild variant="outline" size="md">
-                <Link href={CTA.contactHref}>
-                  <MapPin className="size-4" aria-hidden="true" />
-                  {CTA.contactLabel}
+              <Button asChild variant="brand" size="md">
+                <Link href={CTA.bookHref}>
+                  <CalendarCheck className="size-4" aria-hidden="true" />
+                  {CTA.bookLabel}
                 </Link>
               </Button>
             </div>
