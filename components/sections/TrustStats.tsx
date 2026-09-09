@@ -38,6 +38,7 @@ export function TrustStats() {
         <ul className="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
           {trustPoints.map((point, index) => {
             const IconComponent = icons[index] ?? ShieldCheck;
+            const [lineOne, lineTwo] = twoLines(point);
             return (
               <li
                 key={point}
@@ -53,11 +54,8 @@ export function TrustStats() {
                   aria-hidden="true"
                 />
                 <p className="font-display text-lg uppercase leading-snug tracking-[0.04em] text-white">
-                  {twoLines(point).map((line) => (
-                    <span key={line} className="block">
-                      {line}
-                    </span>
-                  ))}
+                  <span className="block">{lineOne}</span>{" "}
+                  <span className="block">{lineTwo}</span>
                 </p>
               </li>
             );

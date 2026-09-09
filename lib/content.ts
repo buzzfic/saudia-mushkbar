@@ -105,7 +105,7 @@ export const conditions = [
       "Routine checks for cholesterol, blood sugar, cancer screenings, and other preventive tests to catch health issues early.",
   },
   {
-    title: "Annual Physicals & Wellness Exams",
+    title: "Annual Physicals & Preventive Care",
     icon: "ClipboardCheck",
     description:
       "Comprehensive yearly checkups for adults and children to monitor health, and update vaccinations.",

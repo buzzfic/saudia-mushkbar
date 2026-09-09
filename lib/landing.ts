@@ -551,8 +551,8 @@ export const landingPages: LandingPageData[] = [
     image: {
       src: "/images/doctor/new-patients.jpg",
       alt: "Dr. Saudia Mushkbar, MD in her Toledo office beside a panel headed “New Patients Welcome”, listing care for all ages, preventive care and annual exams, chronic disease management, medication management, most insurance plans accepted, and a partner in your health",
-      width: 1145,
-      height: 1374,
+      width: 1024,
+      height: 1536,
     },
     grid: {
       title: "Comprehensive Care for Every Member of Your Family",
@@ -640,7 +640,7 @@ export const landingPages: LandingPageData[] = [
         {
           title: "GLP-1 Therapy",
           description:
-            "FDA-approved medications like Semaglutide (Ozempic®, Wegovy®) to help reduce appetite and support weight loss.",
+            "Prescription weight-management options may include GLP-1–based medications such as semaglutide (Wegovy® and Ozempic®), tirzepatide (Zepbound® and Mounjaro®), and liraglutide (Saxenda®), when clinically appropriate. FDA-approved indications vary by medication.",
           icon: "Pill",
         },
         {
