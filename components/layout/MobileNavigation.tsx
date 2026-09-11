@@ -60,6 +60,23 @@ export function MobileNavigation() {
 
           <nav aria-label="Mobile" className="flex-1 px-4 py-4">
             <ul className="flex flex-col gap-1">
+              {/* The header mark links to The Toledo Clinic from `sm` up, so
+                  the drawer carries Home explicitly. */}
+              <li>
+                <Link
+                  href="/"
+                  aria-current={isActive("/") ? "page" : undefined}
+                  className={cn(
+                    "block rounded-[4px] px-3 py-3 font-display text-lg transition-colors",
+                    isActive("/")
+                      ? "bg-brand-50 text-brand"
+                      : "text-brand hover:bg-brand-50",
+                  )}
+                >
+                  Home
+                </Link>
+              </li>
+
               {primaryNav.map((item) => (
                 <li key={item.label}>
                   <Link

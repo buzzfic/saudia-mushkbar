@@ -32,6 +32,49 @@ export const insurancePlans: InsurancePlan[] = [
 export const insuranceSummary =
   "Humana • Anthem • Aetna • MediGold • UnitedHealthcare • Medical Mutual • and others.";
 
+/**
+ * The full plan list as supplied by the practice (2026-09-11) for the booking
+ * page. Names only — these are the plans the office names, not logos it is
+ * licensed to display, and a patient should still call to confirm their own
+ * plan. Keep this in step with `insurancePlans` above, which is the smaller
+ * Medicare Advantage logo row.
+ */
+export const acceptedInsuranceNames = [
+  "AARP",
+  "AARP Medicare Supplement",
+  "Aetna",
+  "Aetna Medicare Advantage",
+  "Anthem",
+  "BCBS",
+  "Buckeye",
+  "CareSource",
+  "Cigna",
+  "Cofinity",
+  "Humana",
+  "Humana Medicare Advantage",
+  "Paramount",
+  "UnitedHealthcare",
+  "UnitedHealthcare – Ohio",
+];
+
+/** Medical school, supplied by the practice (2026-09-11). */
+export const education = [{ school: "Dow Medical University", year: "2000" }];
+
+/** Hospital credentials, supplied by the practice (2026-09-11). */
+export const hospitalCredentials = [
+  "Mercy Health – St. Anne Hospital",
+  "ProMedica Flower Hospital",
+  "ProMedica Toledo Hospital",
+];
+
+/** The four short proof points that run under the booking page rating line. */
+export const bookingHighlights = [
+  "20+ Years of Experience",
+  "Board Certified",
+  "Personalized Care",
+  "Children, Adults & Seniors",
+];
+
 export const trustPoints = [
   "20+ years of experience",
   "Board certified in Family Medicine",

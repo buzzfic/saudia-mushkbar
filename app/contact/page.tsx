@@ -44,7 +44,7 @@ export default function ContactPage() {
         crumbs={crumbs}
         eyebrow="Contact"
         title="Schedule a Visit with Dr. Mushkbar"
-        intro="Appointments are booked by phone. Give the office a call and our team will confirm your insurance plan and find you the soonest opening — same-day and same-week appointments are available."
+        intro="New patients book by phone — give the office a call and our team will confirm your insurance plan and find you the soonest opening, including same-day and same-week appointments. Established patients can schedule a follow-up online through Healow."
         image={{
           src: "/images/doctor/doctor-saudia-mushkbar-white-coat.jpg",
           alt: "Dr. Saudia Mushkbar, MD, family medicine physician in Toledo, Ohio, in a Toledo Clinic white coat",

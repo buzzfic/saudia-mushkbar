@@ -1,13 +1,15 @@
-import { CONTACT, MAPS, PRACTICE, REVIEWS } from "@/lib/constants";
+import { BOOKING, CONTACT, MAPS, PRACTICE, REVIEWS } from "@/lib/constants";
+import { education, hospitalCredentials } from "@/lib/content";
 import { siteUrl } from "@/lib/seo";
 
 /**
  * Schema.org graph for the practice.
  *
  * Only facts published on the site are described here: name, address, phone,
- * affiliation, specialty and the aggregate ratings shown on the review cards.
- * No credentials, awards or insurance claims are asserted beyond what the site
- * itself states.
+ * affiliation, specialty, the aggregate ratings shown on the review cards, and
+ * the medical school, hospital credentials and booking link published on the
+ * appointments page. No awards or insurance claims are asserted beyond what
+ * the site itself states.
  */
 
 const ORG_ID = `${siteUrl}/#practice`;
@@ -57,6 +59,29 @@ export function practiceGraph() {
           ratingValue: REVIEWS.google.ratingValue,
           reviewCount: REVIEWS.google.reviewCount,
           bestRating: 5,
+        },
+        alumniOf: education.map((item) => ({
+          "@type": "EducationalOrganization",
+          name: item.school,
+        })),
+        hospitalAffiliation: hospitalCredentials.map((name) => ({
+          "@type": "Hospital",
+          name,
+        })),
+        /** Online scheduling, for the "book an appointment" rich result. */
+        potentialAction: {
+          "@type": "ReserveAction",
+          name: BOOKING.healowLabel,
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: BOOKING.healowUrl,
+            inLanguage: "en-US",
+            actionPlatform: [
+              "https://schema.org/DesktopWebPlatform",
+              "https://schema.org/MobileWebPlatform",
+            ],
+          },
+          result: { "@type": "Reservation", name: "Appointment" },
         },
         sameAs: [PRACTICE.affiliationUrl, REVIEWS.healthgrades.url],
       },

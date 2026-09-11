@@ -127,6 +127,7 @@ export const allRoutes: { path: string; priority: number; changeFrequency: "week
   { path: "/services", priority: 0.9, changeFrequency: "monthly" },
   { path: "/contact", priority: 0.8, changeFrequency: "monthly" },
   { path: "/new-patients", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/book-online", priority: 0.9, changeFrequency: "monthly" },
   { path: "/medicare-primary-care-doctor-toledo", priority: 0.9, changeFrequency: "monthly" },
   { path: "/medicare-annual-wellness-visit-toledo", priority: 0.8, changeFrequency: "monthly" },
   { path: "/switch-medicare-primary-care-doctor-toledo", priority: 0.8, changeFrequency: "monthly" },

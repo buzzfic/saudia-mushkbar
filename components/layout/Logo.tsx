@@ -5,10 +5,14 @@ import { PRACTICE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 /**
- * Brand lockup: the practice name set in the display face beside The Toledo
- * Clinic mark used on the live site. The mark links home rather than off-site
- * so the primary logo behaves the way visitors expect; the Toledo Clinic
- * profile stays linked from the footer.
+ * Brand lockup: The Toledo Clinic mark beside the practice name set in the
+ * display face.
+ *
+ * The two halves link to different places, so they are siblings rather than
+ * one nested link (an anchor inside an anchor is invalid HTML): the clinic
+ * mark opens Dr. Mushkbar's profile on toledoclinic.com, and the name goes
+ * home. Below `sm` the name is hidden for width, so the mark carries the home
+ * link there instead and the drawer's "Home" item covers the rest.
  */
 export function Logo({
   className,
@@ -17,34 +21,48 @@ export function Logo({
   className?: string;
   tone?: "dark" | "light";
 }) {
+  const mark = (
+    <Image
+      src="/images/logo/saudia-mushkbar-logo.png"
+      alt="The Toledo Clinic"
+      width={200}
+      height={78}
+      priority
+      className="h-8 w-auto sm:h-9"
+    />
+  );
+
+  const chip = cn(
+    "flex shrink-0 items-center rounded-[4px] transition-opacity hover:opacity-80",
+    // The mark is dark ink on white, so on the dark footer it sits on a white
+    // chip rather than being inverted into a solid block.
+    tone === "light" && "bg-white px-2.5 py-1.5",
+  );
+
   return (
-    <Link
-      href="/"
-      className={cn("group flex items-center gap-3.5", className)}
-      aria-label={`${PRACTICE.doctorNameWithCredentials} — home`}
-    >
-      <span
-        className={cn(
-          "flex shrink-0 items-center rounded-[4px]",
-          // The mark is dark ink on white, so on the dark footer it sits on a
-          // white chip rather than being inverted into a solid block.
-          tone === "light" && "bg-white px-2.5 py-1.5",
-        )}
+    <div className={cn("flex items-center gap-3.5", className)}>
+      {/* Home on phones, where the name beside it is hidden. */}
+      <Link href="/" className={cn(chip, "sm:hidden")} aria-label="Home">
+        {mark}
+      </Link>
+
+      <a
+        href={PRACTICE.affiliationUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cn(chip, "hidden sm:flex")}
+        aria-label={`${PRACTICE.doctorName} on The Toledo Clinic website (opens in a new tab)`}
       >
-        <Image
-          src="/images/logo/saudia-mushkbar-logo.png"
-          alt="The Toledo Clinic"
-          width={200}
-          height={78}
-          priority
-          className="h-8 w-auto sm:h-9"
-        />
-      </span>
-      <span
+        {mark}
+      </a>
+
+      <Link
+        href="/"
         className={cn(
-          "hidden min-w-0 border-l pl-3.5 leading-tight sm:block",
+          "hidden min-w-0 border-l pl-3.5 leading-tight transition-opacity hover:opacity-80 sm:block",
           tone === "light" ? "border-white/25" : "border-hairline",
         )}
+        aria-label={`${PRACTICE.doctorNameWithCredentials} — home`}
       >
         <span
           className={cn(
@@ -62,7 +80,7 @@ export function Logo({
         >
           {PRACTICE.tagline}
         </span>
-      </span>
-    </Link>
+      </Link>
+    </div>
   );
 }
