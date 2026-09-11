@@ -29,6 +29,7 @@ const crumbs = [
   { name: "About", path },
 ];
 
+
 export default function AboutPage() {
   return (
     <>
