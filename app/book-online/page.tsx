@@ -27,7 +27,7 @@ import { breadcrumbList, webPage } from "@/lib/structured-data";
 
 const title = "Schedule an Appointment — Dr. Saudia Mushkbar, MD";
 const description =
-  "Book with Dr. Saudia Mushkbar, MD in Toledo, Ohio. New patients call 419-517-7687; established patients can schedule follow-up visits online through Healow.";
+  "Book with Dr. Saudia Mushkbar, MD in Toledo, Ohio. Call 419-517-7687 or request an appointment online through Healow. Same-day and same-week appointments available.";
 const path = "/book-online";
 
 export const metadata: Metadata = pageMetadata({ title, description, path });
@@ -40,14 +40,16 @@ const crumbs = [
 /** Healow opens in a new tab — it is a separate portal, not part of this site. */
 function HealowButton({
   variant = "brand",
+  label = BOOKING.healowLabel,
 }: {
   variant?: "brand" | "primary";
+  label?: string;
 }) {
   return (
     <Button asChild variant={variant} size="lg">
       <a href={BOOKING.healowUrl} target="_blank" rel="noopener noreferrer">
         <CalendarCheck className="size-4" aria-hidden="true" />
-        {BOOKING.healowLabel}
+        {label}
         <ExternalLink className="size-3.5 opacity-70" aria-hidden="true" />
       </a>
     </Button>
@@ -68,7 +70,7 @@ export default function BookOnlinePage() {
         crumbs={crumbs}
         eyebrow="Appointments"
         title="Schedule Your Appointment"
-        intro={`${PRACTICE.doctorNameWithCredentials} is board-certified in Family Medicine and cares for children, adults and seniors. New patients schedule by phone so our staff can register you and confirm your plan; established patients can book a follow-up online through Healow.`}
+        intro={`${PRACTICE.doctorNameWithCredentials} is board-certified in Family Medicine and cares for children, adults and seniors. Call the office to schedule, or request an appointment online through the Healow portal — new and established patients alike.`}
         image={{
           src: "/images/doctor/doctor-saudia-mushkbar-white-coat.jpg",
           alt: "Dr. Saudia Mushkbar, MD, board-certified family medicine physician in Toledo, Ohio",
@@ -100,15 +102,17 @@ export default function BookOnlinePage() {
               <h2 className="mt-6 font-display text-display-3">New Patients</h2>
               <p className="mt-4 max-w-prose leading-relaxed text-body">
                 Please call {CONTACT.phoneDisplay} to schedule your first
-                appointment. Our friendly staff will be happy to assist you.
+                appointment, or request an appointment through the online
+                Healow portal. Our friendly staff will be happy to assist you.
               </p>
-              <div className="mt-7">
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Button asChild variant="alert" size="lg">
                   <a href={CTA.callHref}>
                     <Phone className="size-4" aria-hidden="true" />
                     {CTA.callLabel}
                   </a>
                 </Button>
+                <HealowButton label="Request on Healow" />
               </div>
             </article>
 
@@ -200,7 +204,6 @@ export default function BookOnlinePage() {
           <SectionHeading
             eyebrow="Insurance"
             title="Accepted Insurance Plans"
-            description="We accept most major insurance plans."
             size="md"
             rule
           />
@@ -218,7 +221,7 @@ export default function BookOnlinePage() {
           </ul>
 
           <p className="mt-8 max-w-prose leading-relaxed text-body">
-            Please call{" "}
+            We accept most major insurance plans. Please call{" "}
             <a
               href={CTA.callHref}
               className="font-medium text-brand underline underline-offset-4 hover:text-brand-500"
@@ -301,7 +304,7 @@ export default function BookOnlinePage() {
       <FinalCTA
         showBook={false}
         title="Ready to Book?"
-        description="Established patients can schedule on Healow. New patients, give the office a call and we will find you the soonest opening."
+        description="Call the office or request an appointment on Healow, and we will find you the soonest opening."
         note="Same-Day & Same-Week Appointments Available"
       />
     </>

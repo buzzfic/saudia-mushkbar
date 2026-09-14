@@ -88,10 +88,10 @@ export const ANALYTICS = {
 
 /**
  * Online scheduling runs on Healow, the patient portal tied to the practice's
- * record system. It is for established patients only — new patients are asked
- * to call so the office can register them and confirm their plan first, which
- * is why the site's Book Online buttons lead to /book-online rather than
- * straight out to Healow.
+ * record system. New patients can request an appointment there and established
+ * patients can book follow-ups. The site's Book Online buttons lead to
+ * /book-online rather than straight out to Healow, so people see both routes
+ * (phone or portal) before leaving the site.
  */
 export const BOOKING = {
   healowUrl: "https://healow.com/apps/provider/saudia-mushkbar-3697595",
@@ -99,7 +99,7 @@ export const BOOKING = {
 } as const;
 
 /**
- * Appointments are booked by phone or, for established patients, on Healow.
+ * Appointments are booked by phone or requested online on Healow.
  * The primary call to action dials the office directly. Directions and the
  * address are reached from the nav and the footer rather than a button.
  */
