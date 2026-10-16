@@ -297,6 +297,13 @@ export type MediaAppearance = {
 export const mediaAppearances: MediaAppearance[] = [
   {
     title:
+      "Women’s Preventive Healthcare at Every Age | Dr. Saudia Mushkbar on WTOL 11",
+    outlet: "WTOL 11",
+    embedUrl: "https://www.youtube.com/embed/5oRpkt3b4ys",
+    provider: "YouTube",
+  },
+  {
+    title:
       "The GLP-1 Revolution: Dr. Mushkbar Discusses Ozempic, Mounjaro, and Weight Loss.",
     outlet: "YouTube",
     embedUrl: "https://www.youtube.com/embed/T79gMcfS1kk?si=4an0vFcdnt0IhHaL",

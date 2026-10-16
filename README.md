@@ -108,7 +108,7 @@ Never commit `.env.local`.
   touching layout.
 - **Business facts live in `lib/constants.ts`.** Name, address and phone are
   written once and reused, including in the structured data.
-- **Third-party media is click-to-load.** The five WTOL / YouTube / iHeart
+- **Third-party media is click-to-load.** The WTOL / YouTube / iHeart
   embeds mount only when a visitor asks for them.
 - **Booking is by phone.** Every primary call to action is a `tel:` link to the
   office; the secondary action goes to `/contact` for the address, hours, map
